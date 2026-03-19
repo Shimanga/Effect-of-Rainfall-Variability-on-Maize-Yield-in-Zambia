@@ -19,8 +19,8 @@ The analysis includes trend evaluation, correlation testing, and rainfall effici
 
 <h3>Data Exclusions</h3>
 <ul>
-  <li>2008–2010 yield data missing → removed from analysis</li>
-  <li>Muchinga Province (2011–2013 only) → excluded from time-series analysis</li>
+  <li>2008–2010 yield data missing. Removed from analysis</li>
+  <li>Muchinga Province (2011–2013 only). Excluded from time-series analysis</li>
 </ul>
 
 <h2>Key Findings</h2>
