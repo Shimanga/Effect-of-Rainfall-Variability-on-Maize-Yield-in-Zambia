@@ -223,7 +223,7 @@ Total seasonal rainfall is not the primary driver of maize yields in Zambia. The
 
 ### Planned Visualizations
 1. **Rainfall vulnerability dashboard** Provincial ranking by low-rainfall frequency
-2. **Monthly rainfall analysis**  If monthly data becomes available, assess:
+2. **Monthly rainfall analysis**  Assess:
    - Onset of rains (planting window)
    - Dry spells during critical growth stages
    - Excess rainfall during harvest
