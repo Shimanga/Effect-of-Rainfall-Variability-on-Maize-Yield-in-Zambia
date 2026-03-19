@@ -1,108 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rainfall and Maize Yield Analysis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 40px;
+      max-width: 900px;
+      color: #222;
+    }
+    h1, h2, h3 {
+      color: #111;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 20px 0;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 2px 4px;
+    }
+  </style>
+</head>
+<body>
 
 <h1>Rainfall Variability and Its Effect on Maize Yield in Zambia (1986–2013)</h1>
 
-A data analysis project investigating how rainfall affects maize yield across Zambian provinces from 1986-2013
+<h2>Project Overview</h2>
+<p>
+This project analyzes the relationship between seasonal rainfall and maize yield across Zambian provinces using historical data from 1986 to 2013. The objective is to test whether rainfall meaningfully explains yield outcomes rather than assume it does.
+</p>
+<p>
+The analysis includes trend evaluation, correlation testing, and rainfall efficiency metrics.
+</p>
 
-Critical Data Notes
+<h2>Dataset Summary</h2>
+<ul>
+  <li><strong>Time period:</strong> 1986–2013</li>
+  <li><strong>Provinces analyzed:</strong> 9 (Muchinga excluded)</li>
+  <li><strong>Observations:</strong> 432</li>
+  <li><strong>Rainfall range:</strong> 723 mm – 2498 mm</li>
+  <li><strong>Yield range:</strong> 0.19 – 3.58 t/ha</li>
+</ul>
 
-Issue Description Handling
-Muchinga Province Created in 2011 from Northern province; only has data for 2011-2013 Excluded from Python time-series analysis; included in Tableau
-2008-2010 Data Gap No yield data available from ZamStats for these years Rows removed from analysis; 24 years remain (1986-2007, 2011-2013)
-Rainfall Scale Original values were 1000x too large (1.5M instead of 1500mm) Divided by 1000 in data cleaning
-Data Structure One row per province-year combination Clean, no duplicates
+<h3>Data Exclusions</h3>
+<ul>
+  <li>2008–2010 yield data missing → removed from analysis</li>
+  <li>Muchinga Province (2011–2013 only) → excluded from time-series analysis</li>
+</ul>
 
-Final Analysis Dataset:
+<h2>Key Findings</h2>
 
-· 9 provinces (excluding Muchinga)
-· 24 years per province (1986-2007, 2011-2013)
-· 432 total observations
-· Rainfall range: 700-2500mm per season
-· Yield range: 0.19-3.58 t/ha
+<h3>1. Rainfall is highly variable, but yield improves over time</h3>
+<p>
+Rainfall shows no clear national trend, while yield increases from 1.67 t/ha (1986) to 2.41 t/ha (2013).
+</p>
+<p><strong>Interpretation:</strong> Yield growth is occurring independently of rainfall patterns.</p>
 
----
+<h3>2. Weak relationship between rainfall and yield</h3>
+<ul>
+  <li>Rainfall–yield correlation: 0.137</li>
+  <li>Rainfall–production correlation: 0.190</li>
+</ul>
+<p><strong>Interpretation:</strong> Rainfall alone is not a strong predictor of maize yield.</p>
 
-Key Findings
+<h3>3. Provincial variation</h3>
+<table>
+  <tr>
+    <th>Province</th>
+    <th>Correlation (Rainfall vs Yield)</th>
+  </tr>
+  <tr><td>Lusaka</td><td>0.453</td></tr>
+  <tr><td>Copperbelt</td><td>0.315</td></tr>
+  <tr><td>Central</td><td>0.294</td></tr>
+  <tr><td>Eastern</td><td>0.170</td></tr>
+  <tr><td>Western</td><td>0.161</td></tr>
+  <tr><td>Southern</td><td>-0.258</td></tr>
+  <tr><td>Northern</td><td>-0.298</td></tr>
+  <tr><td>North-Western</td><td>-0.277</td></tr>
+  <tr><td>Luapula</td><td>-0.476</td></tr>
+</table>
+<p><strong>Interpretation:</strong> Rainfall effects vary by region, with some provinces showing negative relationships.</p>
 
-1. The Rainfall Threshold
+<h3>4. High rainfall does not guarantee high productivity</h3>
+<p>
+Examples show provinces with high rainfall but low or inconsistent yields, while some lower rainfall regions perform better.
+</p>
+<p><strong>Interpretation:</strong> Rainfall is not the limiting factor in many cases.</p>
 
-Is there an optimal rainfall range for maize production?
+<h3>5. Rainfall efficiency provides stronger insight</h3>
+<table>
+  <tr>
+    <th>Province</th>
+    <th>Efficiency (Yield per 100 mm)</th>
+  </tr>
+  <tr><td>Lusaka</td><td>0.178</td></tr>
+  <tr><td>Northern</td><td>0.171</td></tr>
+  <tr><td>Central</td><td>0.128</td></tr>
+  <tr><td>Copperbelt</td><td>0.127</td></tr>
+  <tr><td>Luapula</td><td>0.110</td></tr>
+  <tr><td>Southern</td><td>0.084</td></tr>
+  <tr><td>Western</td><td>0.060</td></tr>
+</table>
+<p><strong>Interpretation:</strong> Efficiency varies significantly, indicating differences in how rainfall is utilized.</p>
 
-Once rainfall exceeds 700-800mm per season, additional rain provides minimal yield benefit. Zambia's provinces generally receive adequate rainfall (700-2500mm), meaning total rainfall is not the limiting factor in most years.
+<h2>Conclusion</h2>
+<p>
+The analysis does not support a strong causal relationship between seasonal rainfall and maize yield in Zambia.
+</p>
+<ul>
+  <li>Rainfall does not explain yield trends</li>
+  <li>Yield improvements are likely driven by non-climatic factors</li>
+  <li>Rainfall impact is inconsistent across provinces</li>
+  <li>Efficiency matters more than total rainfall</li>
+</ul>
 
-Rainfall Range Observations Average Yield Note
-<800mm 4 1.48 t/ha Below optimal
-800-1000mm 45 1.70 t/ha Good
-1000-1200mm 115 1.76 t/ha Optimal
-1200-1400mm 108 1.80 t/ha Optimal
-1400-1600mm 68 1.75 t/ha Plateau
-1600mm+ 62 1.71 t/ha Plateau
+<h2>Limitations</h2>
+<ul>
+  <li>Missing data for 2008–2010</li>
+  <li>Muchinga excluded due to insufficient data</li>
+  <li>Seasonal rainfall does not capture intra-season timing</li>
+  <li>No data on soil, inputs, or farming practices</li>
+</ul>
 
-Insight: The optimal range is 1000-1400mm. Above 1400mm, yields do not increase.
+<h2>Next Steps (Tableau Analysis)</h2>
+<ul>
+  <li>Rainfall vulnerability by province</li>
+  <li>Monthly rainfall analysis to assess timing and distribution</li>
+</ul>
+<p>
+Seasonal totals mask critical dynamics such as dry spells and rainfall timing.
+</p>
 
-2. Provincial Efficiency
+<h2>Tools Used</h2>
+<ul>
+  <li>Python (Pandas, Matplotlib)</li>
+  <li>Jupyter Notebook</li>
+  <li>Tableau (planned)</li>
+</ul>
 
-Which provinces use rainfall most effectively?
+<h2>Final Position</h2>
+<p>
+If rainfall were the dominant driver of maize yield, the relationships would be strong and consistent across provinces. They are not.
+</p>
+<p>
+<strong>Zambia’s maize productivity challenge is not primarily about rainfall volume, but how effectively rainfall is utilized.</strong>
+</p>
 
-Province Avg Yield (t/ha) Avg Rainfall (mm) Efficiency (t/ha per 100mm)
-Central 2.33 1828 0.13
-Southern 1.49 1810 0.08
-Northern 1.93 1195 0.16
-
-Key Insight: Northern province is most efficient (0.16 t/ha per 100mm rain). Southern province is least efficient despite similar rainfall to Central. This suggests soil quality, management practices, and seed varieties matter more than total rainfall once minimum thresholds are met.
-
-3. Low-Rainfall Vulnerability
-
-Which provinces are most affected when rainfall is below normal?
-
-Using the bottom 25th percentile as the threshold for "low rainfall years" (≤1150mm):
-
-Province Low-Rainfall Years % of Years
-Western 11 46%
-Lusaka 10 42%
-Southern 9 38%
-Central 5 21%
-Northern 0 0%
-
-Key Insight: Western, Lusaka, and Southern provinces are most vulnerable to low rainfall. Northern province never experiences low rainfall years by this definition.
-
-4. Yield in Extreme Years
-
-Category Average Yield Difference from Normal
-Low rainfall years (≤1150mm) 1.66 t/ha -6%
-Normal years (1150-1600mm) 1.76 t/ha baseline
-High rainfall years (≥1600mm) 1.76 t/ha 0%
-
-Key Insight: Low rainfall years reduce yields by only 6% on average. This confirms that even "low" rainfall in Zambia (by historical standards) is usually adequate for maize production.
-
-5. Regression Analysis
-
-How much of yield variation does rainfall explain?
-
-· R² = 0.019 (rainfall explains only 1.9% of yield variation)
-· This is not a problem with the analysis—it's the key finding
-
-Interpretation: Once a province receives adequate rainfall (which most do, most years), other factors determine yield outcomes. The 98% unexplained variation comes from:
-
-· Soil fertility differences
-· Seed varieties used
-· Farming practices and technology
-· Timing of rainfall within the season
-· Pest and disease pressure
-· Access to inputs (fertilizer, etc.)
-
----
-
-1. Rainfall is not the problem: Almost all Zambian provinces receive enough rain (700-2500mm) for maize production in most years.
-2. Efficiency varies dramatically: Northern province produces twice as much maize per drop of rain as Southern province, despite similar total rainfall.
-3. The real leverage points: With only 2% of yield variation explained by total rainfall, efforts to improve yields should focus on soil health, improved seeds, and better farming practices—not hoping for more rain.
-
----
-
-Data Limitations
-
-Limitation Impact
-No 2008-2010 yield data 3 years missing from all provinces
-Muchinga only 2011-2013 Excluded from time-series analysis
-Rainfall is seasonal total only Cannot assess timing or distribution within season
-No soil or management data Cannot explain the 98% unexplained variation
-
+</body>
+</html>
