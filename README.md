@@ -2,7 +2,7 @@
 
 A comprehensive analysis examining the relationship between seasonal rainfall patterns and maize yield across nine Zambian provinces from 1986 to 2013.
 
-## 📋 Table of Contents
+##  Table of Contents
 - [Project Overview](#project-overview)
 - [Data Summary](#data-summary)
 - [Dataset Structure](#dataset-structure)
@@ -82,7 +82,7 @@ Rainfall explains approximately 2% of variation in maize yields nationally (R² 
 | Southern | 1,068 | 0.90 | -0.258 |
 | Western | 1,262 | 0.77 | 0.161 |
 
-## 🔑 Key Findings
+##  Key Findings
 
 ### 1. Rainfall-Yield Correlation is Weak Nationally
 
@@ -90,8 +90,8 @@ Rainfall explains approximately 2% of variation in maize yields nationally (R² 
 
 This weak relationship indicates that total seasonal rainfall is a poor predictor of maize yields across Zambia. Provincial patterns reveal:
 
-- **Positive correlations** in Lusaka (0.453), Copperbelt (0.315), Central (0.294) — where rainfall is generally lower
-- **Negative correlations** in Luapula (-0.476), Northern (-0.298), North-Western (-0.277) — high-rainfall provinces where more rain may reduce yields
+- **Positive correlations** in Lusaka (0.453), Copperbelt (0.315), Central (0.294), where rainfall is generally lower
+- **Negative correlations** in Luapula (-0.476), Northern (-0.298), North-Western (-0.277), high-rainfall provinces where more rain may reduce yields
 
 This suggests an optimal rainfall range, beyond which additional precipitation becomes detrimental.
 
@@ -111,7 +111,7 @@ This suggests an optimal rainfall range, beyond which additional precipitation b
 
 **National average:** 0.119 t/ha per 100mm rain
 
-Lusaka is 3× more efficient than Western province — indicating substantial differences in soil quality, management practices, or other factors.
+Lusaka is 3× more efficient than Western province, indicating substantial differences in soil quality, management practices, or other factors.
 
 ### Optimal Rainfall Range
 
@@ -125,7 +125,7 @@ Lusaka is 3× more efficient than Western province — indicating substantial di
 | 1600-1800 mm | 74 | 1.79 | +2% |
 | >1800 mm | 89 | 1.84 | +5% |
 
-Optimal range: 1200-1600 mm — yields peak and stabilize in this band.
+**Optimal range:** 1200-1600 mm, yields peak and stabilize in this band.
 
 · Below 1000 mm: yields drop sharply (35% below average)
 · Above 1800 mm: no additional yield benefit (diminishing returns)
@@ -144,8 +144,8 @@ Optimal range: 1200-1600 mm — yields peak and stabilize in this band.
 | Northern | 4 |
 | Luapula | 0 |
 
-Most vulnerable: Lusaka, Southern, Eastern, Western - experience low rainfall in >50% of years
-Least vulnerable: Luapula, Northern - rarely experience drought conditions
+**Most vulnerable:** Lusaka, Southern, Eastern, Western - experience low rainfall in >50% of years
+**Least vulnerable:** Luapula, Northern - rarely experience drought conditions
 
 ### Yield in Extreme Years
 
@@ -160,11 +160,11 @@ Low-rainfall years produce the same average yield as normal years nationally. Th
 ## Regression Analysis
 
 ### Linear Model (National)
-- **R² = 0.019** — Rainfall explains only 1.9% of yield variation
+- **R² = 0.019**  Rainfall explains only 1.9% of yield variation
 - **Coefficient**: 0.0003 (essentially flat)
 
 ### Quadratic Model (National)
-- **R² = 0.020** — No improvement; no evidence of strong nonlinear relationship
+- **R² = 0.020** No improvement; no evidence of strong nonlinear relationship
 - **Rainfall² coefficient**: effectively zero
 
 ### Provincial Regression Models
@@ -182,14 +182,14 @@ Low-rainfall years produce the same average yield as normal years nationally. Th
 | Western | 0.026 | 0.0004 | 0.452 |
 
 **Statistically significant relationships (p<0.05):**
-- **Lusaka**: Positive relationship — each 100mm rain increases yield by 0.16 t/ha
-- **Luapula**: Negative relationship — each 100mm rain decreases yield by 0.09 t/ha
+- **Lusaka**: Positive relationship. Each 100mm rain increases yield by 0.16 t/ha
+- **Luapula**: Negative relationship. Each 100mm rain decreases yield by 0.09 t/ha
 
-## 📉 Trends Over Time (1986-2013)
+##  Trends Over Time (1986-2013)
 
 ### National Averages
 - **Rainfall**: Highly variable, no clear trend
-- **Yield**: Increased from ~1.2 t/ha (1986) to ~2.0 t/ha (2013) — likely due to improved varieties and inputs
+- **Yield**: Increased from ~1.2 t/ha (1986) to ~2.0 t/ha (2013), likely due to improved varieties and inputs
 - **Production**: Peak at 2.4 million tons (2011), up from 0.8 million (1986)
 
 ### Provincial Yield Trends
@@ -197,15 +197,15 @@ Low-rainfall years produce the same average yield as normal years nationally. Th
 - Luapula and Northern consistently highest-yielding
 - Southern and Western consistently lowest
 
-## 🎯 Conclusions & Implications
+##  Conclusions & Implications
 
 ### What Rainfall Does NOT Explain
 Total seasonal rainfall is not the primary driver of maize yields in Zambia. The weak correlation (0.137) and low R² (0.019) indicate that:
 
-1. **Rainfall timing matters more than total amount** — seasonal distribution cannot be assessed with current data
-2. **Soil quality varies significantly** — explains efficiency differences (Lusaka 3× Western)
-3. **Management practices differ** — input use, variety selection, planting dates
-4. **Topography and drainage** — high-rainfall provinces may experience waterlogging
+1. **Rainfall timing matters more than total amount** Seasonal distribution cannot be assessed with current data
+2. **Soil quality varies significantly** Tis explains efficiency differences (Lusaka 3× Western)
+3. **Management practices differ** Input use, variety selection, planting dates
+4. **Topography and drainage** High-rainfall provinces may experience waterlogging
 
 ### What the Data Shows
 - **Optimal range**: 1200-1600 mm produces highest yields
@@ -219,13 +219,13 @@ Total seasonal rainfall is not the primary driver of maize yields in Zambia. The
 3. **Efficiency gap** suggests potential for knowledge transfer from high- to low-efficiency provinces
 4. **Rainfall timing data needed** — monthly or dekadal rainfall would reveal critical period vulnerabilities
 
-## 📊 Next Steps / Tableau Integration
+##  Next Steps / Tableau Integration
 
 ### Planned Visualizations
-1. **Rainfall vulnerability dashboard** — Provincial ranking by low-rainfall frequency
-2. **Monthly rainfall analysis** — If monthly data becomes available, assess:
+1. **Rainfall vulnerability dashboard** Provincial ranking by low-rainfall frequency
+2. **Monthly rainfall analysis**  If monthly data becomes available, assess:
    - Onset of rains (planting window)
    - Dry spells during critical growth stages
    - Excess rainfall during harvest
-3. **Efficiency mapping** — Geographic visualization of yield per 100mm rain
-4. **Time-series animation** — 28 years of rainfall and yield patterns
+3. **Efficiency mapping**  Geographic visualization of yield per 100mm rain
+4. **Time-series animation**  28 years of rainfall and yield patterns
