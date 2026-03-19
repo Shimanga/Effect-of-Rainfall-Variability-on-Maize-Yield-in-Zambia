@@ -125,5 +125,44 @@ If rainfall were the dominant driver of maize yield, the relationships would be 
 </html>
 
 
-You're right, I apologize for the inconsistent formatting! Here's the complete README with proper markdown formatting throughout:
+# Rainfall vs Maize Production and Yield in Zambia (1986-2013)
+
+A comprehensive analysis examining the relationship between seasonal rainfall patterns and maize yield across nine Zambian provinces over a 28-year period.
+
+## 📋 Table of Contents
+- [Project Overview](#project-overview)
+- [Data Processing](#data-processing)
+- [Dataset Structure](#dataset-structure)
+- [Summary Statistics](#summary-statistics)
+- [Key Findings](#key-findings)
+- [Regression Analysis](#regression-analysis)
+- [Trends Over Time](#trends-over-time)
+- [Conclusions & Implications](#conclusions--implications)
+- [Next Steps / Tableau Integration](#next-steps--tableau-integration)
+- [Repository Structure](#repository-structure)
+- [Requirements](#requirements)
+- [Usage](#usage)
+- [Data Citation](#data-citation)
+
+## 🎯 Project Overview
+
+This analysis investigates the relationship between seasonal rainfall and maize yield across nine provinces of Zambia from 1986 to 2013. The dataset combines annual rainfall totals with maize production and yield figures to assess how precipitation patterns influence agricultural outcomes.
+
+**Key Finding**  
+Rainfall explains approximately 2% of variation in maize yields nationally (R² = 0.019), suggesting that factors beyond total seasonal rainfall—including rainfall timing, soil conditions, and agricultural practices—are the primary drivers of yield variability.
+
+## 🔧 Data Processing
+
+### Source
+- **Dataset**: Final_maize_production_yield_climate_dataset (Google Sheets)
+- **Observations**: 438 across 10 provinces
+- **Note**: Rainfall data originally recorded at 1000× scale, converted to millimeters
+
+### Data Cleaning
+
+```python
+# Key transformations applied
+df['Rainfall_mm'] = df['Rainfall_raw'] / 1000  # Convert from 1000x scale
+df = df.dropna(subset=['Province', 'Year'])
+df = df[~((df['Province'] == 'Muchinga') & (df['Year'] < 2011))]  # Filter Muchinga
 
