@@ -185,7 +185,7 @@ Low-rainfall years produce the same average yield as normal years nationally. Th
 - **Lusaka**: Positive relationship. Each 100mm rain increases yield by 0.16 t/ha
 - **Luapula**: Negative relationship. Each 100mm rain decreases yield by 0.09 t/ha
 
-##  Trends Over Time (1986-2013)
+##  Trends Over Time
 
 ### National Averages
 - **Rainfall**: Highly variable, no clear trend
