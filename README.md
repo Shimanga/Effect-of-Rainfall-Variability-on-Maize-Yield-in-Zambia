@@ -8,34 +8,33 @@ A comprehensive analysis examining the relationship between seasonal rainfall pa
 - [Dataset Structure](#dataset-structure)
 - [Summary Statistics](#summary-statistics)
 - [Key Findings](#key-findings)
-- [Monthly Rainfall Analysis (NEW)](#monthly-rainfall-analysis-new)
+- [Monthly Rainfall Analysis](#monthly-rainfall-analysis)
 - [Regression Analysis](#regression-analysis)
 - [Trends Over Time](#trends-over-time)
 - [Conclusions & Implications](#conclusions--implications)
 - [Next Steps / Tableau Integration](#next-steps--tableau-integration)
 - [Repository Structure](#repository-structure)
-- [Requirements](#requirements)
-- [Usage](#usage)
+- [File_Requirements](#file-requirements)
 - [Data Citation](#data-citation)
 
 ---
 
 ## Project Overview
 
-This analysis investigates the relationship between rainfall and maize yield across nine provinces of Zambia from 1986 to 2013. Initial analysis of **seasonal rainfall totals** showed a weak correlation with yield (R² = 0.019), suggesting total rainfall alone does not explain agricultural outcomes. To understand why, we conducted a deeper investigation into **monthly rainfall patterns** (1981–2026) across the growing season (October–March). This revealed distinct regional rainfall "signatures" that provide a more nuanced understanding of climate impacts on agriculture.
+This analysis investigates the relationship between rainfall and maize yield across nine provinces of Zambia from 1986 to 2013. Initial analysis of seasonal rainfall totals showed a weak correlation with yield (R² = 0.019), suggesting total rainfall alone does not explain agricultural outcomes. To understand why, we conducted a deeper investigation into monthly rainfall patterns (1981–2026) across the growing season (October–March). This revealed distinct regional rainfall "signatures" that provide a more nuanced understanding of climate impacts on agriculture.
 
-**Key Finding**: The relationship between rainfall and maize yield is not uniform across Zambia. It is mediated by the **timing and distribution of rainfall**, which varies significantly by province. While seasonal totals are a poor predictor, the *pattern* of rain across the growing season is critical. This report identifies these regional patterns and their implications for agricultural planning.
+**Key Finding**: The relationship between rainfall and maize yield is not uniform across Zambia. It is mediated by the timing and distribution of rainfall, which varies significantly by province. While seasonal totals are a poor predictor, the *pattern* of rain across the growing season is critical. This report identifies these regional patterns and their implications for agricultural planning.
 
 ---
 
 ## Data Summary
 
-- **Time period (yield):** 1986–2013
-- **Time period (rainfall):** 1981–2026
+- **Time period (yield):** 1986-2013
+- **Time period (rainfall):** 1981-2026
 - **Provinces analyzed:** 9 (Muchinga excluded from yield analysis due to limited data)
 - **Observations:** 432 (yield), 8,150 (monthly rainfall)
-- **Rainfall range:** 723 mm – 2,498 mm (seasonal total)
-- **Yield range:** 0.19 – 3.58 t/ha
+- **Rainfall range:** 723 mm - 2,498 mm (seasonal total)
+- **Yield range:** 0.19 - 3.58 t/ha
 
 ### Sources
 - **Yield Dataset**: `Final_maize_production_yield_climate_dataset` (438 observations across 10 provinces)
@@ -181,7 +180,7 @@ Low-rainfall years produce the same average yield as normal years nationally. Th
 
 ---
 
-## Monthly Rainfall Analysis (NEW)
+## Monthly Rainfall Analysis
 
 ### 6. Provincial Rainfall Patterns Reveal Distinct "Signatures"
 
@@ -210,13 +209,13 @@ Analysis of 45 years of monthly rainfall data (1981–2026) reveals that provinc
 | **Extended season** | Rainfall continues into March | Eastern, Lusaka | Late moisture supports grain filling; wet harvest risk; requires varieties that mature before heavy late rains |
 | **Evenly distributed** | Consistent rainfall across all months | Southern | Requires consistent moisture throughout; vulnerable to any dry spell |
 
-**Key Insight**: October is **not** the wettest month for any province. The timing of peak rainfall varies from December (Luapula, Northern) to a gradual extension into March (Eastern, Lusaka).
+**Key Insight**: October is not the wettest month for any province. The timing of peak rainfall varies from December (Luapula, Northern) to a gradual extension into March (Eastern, Lusaka).
 
 ### 7. Seasonal Totals Show Significant Declines in Vulnerable Provinces
 
-A comparison of the periods 1981–2000 and 2001–2026 shows significant declines in total growing season rainfall for the driest and most variable provinces.
+A comparison of the periods 1981-2000 and 2001-2026 shows significant declines in total growing season rainfall for the driest and most variable provinces.
 
-| Province | 1981–2000 (mm) | 2001–2026 (mm) | Change (mm) | Change (%) | Statistical Significance |
+| Province | 1981-2000 (mm) | 2001-2026 (mm) | Change (mm) | Change (%) | Statistical Significance |
 |----------|----------------|----------------|-------------|------------|-------------------------|
 | **Southern** | 932 | 831 | **-101** | **-11%** | **Significant** (p=0.015) |
 | **Lusaka** | 939 | 841 | **-98** | **-10%** | **Significant** (p=0.023) |
@@ -260,7 +259,7 @@ This forces farmers to delay planting, compressing the growing season and increa
 | Southern | 10% | 10% | 10% | 10% | 10% | 10% |
 
 **Key Insights:**
-- Eastern and Lusaka show a more **extended rainfall profile**, with March contributing a slightly higher share of seasonal total
+- Eastern and Lusaka show a more extended rainfall profile, with March contributing a slightly higher share of seasonal total
 - This reflects the gradual end of the rainy season rather than a true peak
 - Northern provinces concentrate rainfall in December-January (30% of seasonal total in those two months)
 
@@ -269,11 +268,11 @@ This forces farmers to delay planting, compressing the growing season and increa
 ## Regression Analysis
 
 ### Linear Model (National)
-- **R² = 0.019** — Rainfall explains only 1.9% of yield variation
+- **R² = 0.019** - Rainfall explains only 1.9% of yield variation
 - **Coefficient**: 0.0003 (essentially flat)
 
 ### Quadratic Model (National)
-- **R² = 0.020** — No improvement; no evidence of strong nonlinear relationship
+- **R² = 0.020** - No improvement; no evidence of strong nonlinear relationship
 - **Rainfall² coefficient**: effectively zero
 
 ### Provincial Regression Models
@@ -320,10 +319,10 @@ This forces farmers to delay planting, compressing the growing season and increa
 ### What Rainfall Does NOT Explain
 Total seasonal rainfall is not the primary driver of maize yields in Zambia. The weak correlation (0.137) and low R² (0.019) indicate that:
 
-1. **Rainfall timing matters more than total amount** — The monthly analysis confirms that provinces have distinct rainfall signatures that affect how seasonal totals translate to yield
-2. **Soil quality varies significantly** — This explains efficiency differences (Lusaka 3× Western)
-3. **Management practices differ** — Input use, variety selection, planting dates vary by province
-4. **Topography and drainage** — High-rainfall provinces may experience waterlogging
+1. **Rainfall timing matters more than total amount** - The monthly analysis confirms that provinces have distinct rainfall signatures that affect how seasonal totals translate to yield
+2. **Soil quality varies significantly** - This explains efficiency differences (Lusaka 3× Western)
+3. **Management practices differ** - Input use, variety selection, planting dates vary by province
+4. **Topography and drainage** - High-rainfall provinces may experience waterlogging
 
 ### What the Data Shows
 - **Optimal range**: 1200-1600 mm produces highest yields
@@ -358,7 +357,7 @@ Total seasonal rainfall is not the primary driver of maize yields in Zambia. The
 
 ### Planned Visualizations
 
-1. **Rainfall vulnerability dashboard** — Provincial ranking by low-rainfall frequency
+1. **Rainfall vulnerability dashboard** - Provincial ranking by low-rainfall frequency
 
 2. **Provincial Rainfall Signatures Dashboard**
    - Heatmaps and line charts showing distinct monthly patterns for each province
@@ -368,28 +367,28 @@ Total seasonal rainfall is not the primary driver of maize yields in Zambia. The
    - Maps and bar charts illustrating change in seasonal totals (1981-2000 vs 2001-2026)
    - Increasing frequency of low October rainfall by province
 
-4. **Efficiency mapping** — Geographic visualization of yield per 100mm rain
+4. **Efficiency mapping** - Geographic visualization of yield per 100mm rain
 
 5. **Extreme Year Timeline**
    - Interactive timeline highlighting driest/wettest seasons (e.g., 1992, 2015, 2019)
    - Compare against yield outcomes by province
 
-6. **Time-series animation** — 45 years of rainfall patterns
+6. **Time-series animation** - 45 years of rainfall patterns
 
 ---
 
 ## Repository Structure
 
-├── DATA/                       # Raw and processed datasets
+├── DATA/                       
 │   ├── Final_maize_production_yield_climate_dataset.csv
 │   └── rainfall_analysis_rf_rfq.csv
-├── PYTHON/                     # Analysis scripts
+├── PYTHON/                     
 │   ├── 01_seasonal_analysis.py
 │   ├── 02_monthly_patterns.py
 │   └── 03_temporal_trends.py
-├── REPORTS/                    # Outputs
+├── REPORTS/                   
 │   └── README.md (this file)
-└── SQL/                        # Data cleaning scripts (if any)
+└── SQL/                        
 
 
 ### File Descriptions
@@ -402,3 +401,4 @@ Total seasonal rainfall is not the primary driver of maize yields in Zambia. The
 | `02_monthly_patterns.py` | Monthly rainfall analysis | Provincial rainfall signatures, monthly averages, heatmaps |
 | `03_temporal_trends.py` | Trend analysis | Pre/post-2000 comparisons, significance tests, extreme years |
 
+### Data Citation
