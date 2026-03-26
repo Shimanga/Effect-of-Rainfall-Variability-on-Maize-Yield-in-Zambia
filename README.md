@@ -379,3 +379,26 @@ Total seasonal rainfall is not the primary driver of maize yields in Zambia. The
 ---
 
 ## Repository Structure
+
+├── DATA/                       # Raw and processed datasets
+│   ├── Final_maize_production_yield_climate_dataset.csv
+│   └── rainfall_analysis_rf_rfq.csv
+├── PYTHON/                     # Analysis scripts
+│   ├── 01_seasonal_analysis.py
+│   ├── 02_monthly_patterns.py
+│   └── 03_temporal_trends.py
+├── REPORTS/                    # Outputs
+│   └── README.md (this file)
+└── SQL/                        # Data cleaning scripts (if any)
+
+
+### File Descriptions
+
+| File | Description | Key Outputs |
+|------|-------------|-------------|
+| `Final_maize_production_yield_climate_dataset.csv` | Maize yield and seasonal rainfall data (1986-2013) | Province-level yield, production, seasonal rainfall totals |
+| `rainfall_analysis_rf_rfq.csv` | Monthly rainfall data (1981-2026) | Monthly rainfall (rfq) by province, year, month |
+| `01_seasonal_analysis.py` | Yield data analysis | Correlation tables, efficiency metrics, regression models |
+| `02_monthly_patterns.py` | Monthly rainfall analysis | Provincial rainfall signatures, monthly averages, heatmaps |
+| `03_temporal_trends.py` | Trend analysis | Pre/post-2000 comparisons, significance tests, extreme years |
+
