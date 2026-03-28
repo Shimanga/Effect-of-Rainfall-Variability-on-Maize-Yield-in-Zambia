@@ -36,11 +36,6 @@ This analysis examines how seasonal rainfall variability and monthly rainfall di
 - **Rainfall range:** 723 mm - 2,498 mm (seasonal total)
 - **Yield range:** 0.19 - 3.58 t/ha
 
-### Sources
-- **Yield Dataset**: `Final_maize_production_yield_climate_dataset` (438 observations across 10 provinces)
-- **Rainfall Dataset**: `rainfall_analysis_rf_rfq` (8,150 monthly observations)
-- **Note**: Rainfall data originally recorded at 1000× scale, converted to millimeters
-
 ### Critical Data Limitations
 
 | Limitation | Impact |
@@ -231,7 +226,7 @@ A comparison of the periods 1981-2000 and 2001-2026 shows significant declines i
 
 ### 8. October is No Longer a Reliable Planting Month
 
-Contrary to common assumption, October is **not** the wettest month for any province. Its reliability as the planting window has declined, especially in drier provinces.
+October is not the wettest month for any province. Its reliability as the planting window has declined, especially in drier provinces.
 
 **Frequency of Low October Rainfall (<70mm)**
 
