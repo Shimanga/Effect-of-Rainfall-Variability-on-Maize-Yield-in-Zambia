@@ -15,18 +15,18 @@ EXEC sp_rename
 'year', 'COLUMN';
 
 --Combine rainfall to yield data. Rainfall data uses oct-mar, yield data= seasonal data + 1
-SELECT
-dbo.[rainfall_admlevel1_summary].[province],
-dbo.[rainfall_admlevel1_summary].[season_year],
-dbo.[rainfall_admlevel1_summary].[rfh_total],
-dbo.[Maize_yield].[yield]
-INTO dbo.[rainfall_yield]
-FROM dbo.[rainfall_admlevel1_summary]
+SELECT 
+    dbo.[seasonal_rainfall_totals].province,
+    dbo.[seasonal_rainfall_totals].season_year,
+    dbo.[seasonal_rainfall_totals].seasonal_total_mm,
+    dbo.[Maize_yield].yield
+INTO dbo.[final_rainfall_yield]
+FROM dbo.[seasonal_rainfall_totals]
 INNER JOIN dbo.[Maize_yield]
-ON [rainfall_admlevel1_summary].[province]= dbo.[Maize_yield].[province]
-AND [rainfall_admlevel1_summary].[season_year]= dbo.[Maize_yield].[year]-1
-ORDER BY [rainfall_admlevel1_summary].[province], [rainfall_admlevel1_summary].[season_year];
-
+    ON dbo.[seasonal_rainfall_totals].province = dbo.[Maize_yield].province
+    AND dbo.[seasonal_rainfall_totals].season_year = dbo.[Maize_yield].year-1
+ORDER BY dbo.[seasonal_rainfall_totals].province, 
+         dbo.[seasonal_rainfall_totals].season_year;
 SELECT *
-FROM dbo.[rainfall_yield]
+FROM dbo.[final_rainfall_yield]
 
