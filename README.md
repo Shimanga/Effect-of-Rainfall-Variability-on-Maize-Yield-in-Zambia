@@ -1,6 +1,6 @@
 # Rainfall Variability and Its Effect on Maize Yield in Zambia (1986-2013)
 
-A comprehensive analysis examining the relationship between seasonal rainfall patterns and maize yield across nine Zambian provinces from 1986 to 2013, with new insights from monthly rainfall data (1981-2026).
+This research examines how seasonal rainfall variability and monthly rainfall distribution influence maize yield across nine provinces of Zambia. Rather than assuming total seasonal rainfall drives yield variation, this analysis tests whether rainfall timing and provincial rainfall “signatures” better explain yield outcomes.
 
 ## Table of Contents
 - [Project Overview](#project-overview)
