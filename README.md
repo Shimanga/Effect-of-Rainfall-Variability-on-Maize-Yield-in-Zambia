@@ -1,9 +1,9 @@
 # Rainfall Variability and Its Effect on Maize Yield in Zambia (1986-2013)
 
-This research examines how seasonal rainfall variability and monthly rainfall distribution influence maize yield across nine provinces of Zambia. Rather than assuming total seasonal rainfall drives yield variation, this analysis tests whether rainfall timing and provincial rainfall “signatures” better explain yield outcomes.
+This analysis examines how seasonal rainfall variability and monthly rainfall distribution influence maize yield across nine provinces of Zambia. Rather than assuming total seasonal rainfall drives yield variation, this analysis tests whether rainfall timing and provincial rainfall “signatures” better explain yield outcomes.
 
 ## Table of Contents
-- [Project Overview](#project-overview)
+- [Research Questions](#research-questions)
 - [Data Summary](#data-summary)
 - [Dataset Structure](#dataset-structure)
 - [Summary Statistics](#summary-statistics)
@@ -19,11 +19,11 @@ This research examines how seasonal rainfall variability and monthly rainfall di
 
 ---
 
-## Project Overview
+## Research Questions
 
-This analysis investigates the relationship between rainfall and maize yield across nine provinces of Zambia from 1986 to 2013. Initial analysis of seasonal rainfall totals showed a weak correlation with yield (R² = 0.019), suggesting total rainfall alone does not explain agricultural outcomes. To understand why, we conducted a deeper investigation into monthly rainfall patterns (1981–2026) across the growing season (October–March). This revealed distinct regional rainfall "signatures" that provide a more nuanced understanding of climate impacts on agriculture.
-
-**Key Finding**: The relationship between rainfall and maize yield is not uniform across Zambia. It is mediated by the timing and distribution of rainfall, which varies significantly by province. While seasonal totals are a poor predictor, the *pattern* of rain across the growing season is critical. This report identifies these regional patterns and their implications for agricultural planning.
+1. To what extent does total seasonal rainfall explain variability in maize yield across provinces?
+2. Do monthly rainfall distribution patterns (e.g., peak timing) provide improved explanatory insight?
+3. How do provincial differences in rainfall patterns relate to maize yield responses?
 
 ---
 
