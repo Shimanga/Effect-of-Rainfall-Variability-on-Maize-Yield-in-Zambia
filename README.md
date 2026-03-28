@@ -242,22 +242,25 @@ This forces farmers to delay planting, compressing the growing season and increa
 
 ### 9. Monthly Contribution to Seasonal Total
 
+The percentage each month contributes to the total growing season rainfall (October-March) varies significantly by province. These figures are calculated from 45 years of monthly rainfall data (1981-2026).
+
 | Province | Oct | Nov | Dec | Jan | Feb | Mar |
 |----------|-----|-----|-----|-----|-----|-----|
-| Luapula | 8% | 9% | 10% | 9% | 8% | 8% |
-| Northern | 8% | 9% | 10% | 10% | 9% | 8% |
-| North-Western | 9% | 9% | 10% | 10% | 9% | 9% |
-| Copperbelt | 9% | 9% | 10% | 10% | 9% | 9% |
-| Central | 10% | 9% | 9% | 10% | 10% | 9% |
-| Western | 9% | 9% | 10% | 10% | 10% | 9% |
-| Eastern | 10% | 10% | 10% | 10% | 10% | 11% |
-| Lusaka | 9% | 10% | 10% | 10% | 10% | 11% |
-| Southern | 10% | 10% | 10% | 10% | 10% | 10% |
+| Luapula | 15% | 17% | 19% | 18% | 15% | 16% |
+| Northern | 15% | 17% | 18% | 18% | 16% | 16% |
+| North-Western | 16% | 15% | 18% | 17% | 16% | 18% |
+| Copperbelt | 16% | 16% | 17% | 18% | 16% | 17% |
+| Central | 17% | 16% | 17% | 18% | 17% | 15% |
+| Western | 15% | 15% | 17% | 17% | 17% | 19% |
+| Eastern | 15% | 15% | 15% | 15% | 16% | 24% |
+| Lusaka | 15% | 15% | 16% | 17% | 16% | 21% |
+| Southern | 15% | 15% | 16% | 16% | 15% | 23% |
 
 **Key Insights:**
-- Eastern and Lusaka show a more extended rainfall profile, with March contributing a slightly higher share
-- Northern provinces concentrate rainfall in December-January (30% of seasonal total in those two months)
-
+- **Eastern, Lusaka, Southern**: March contributes significantly more (21-24% of seasonal total) - extended wet season
+- **Luapula, Northern**: December-January contribute 37% of seasonal total - concentrated peak
+- **North-Western, Copperbelt, Central, Western**: More evenly distributed across the growing season
+- October contributes only 15-17% of seasonal total across all provinces - planting month reliability is critical
 ---
 
 ## Regression Analysis
