@@ -1,6 +1,6 @@
 # Rainfall Variability and Its Effect on Maize Yield in Zambia (1986-2013)
 
-This analysis examines how inter‑annual rainfall variability and monthly rainfall distribution influence maize yield across nine provinces of Zambia. Rather than assuming total seasonal rainfall drives yield variation, this analysis tests whether rainfall timing and provincial rainfall “signatures” better explain yield outcomes.
+This study evaluates how rainfall variability influences maize yield across ten provinces of Zambia. The analysis tests whether total seasonal rainfall explains yield variation, or whether provincial differences and rainfall patterns provide stronger explanatory value.
 
 ## Table of Contents
 - [Research Questions](#research-questions)
@@ -32,14 +32,14 @@ This analysis examines how inter‑annual rainfall variability and monthly rainf
 - **Rainfall range:** 445 mm - 1,537 mm (seasonal total)
 - **Yield range:** 0.19 - 3.58 t/ha
 
-### Critical Data Limitations
+### Data Constraints
 
 | Limitation | Impact |
 |------------|--------|
-| Missing yield data (2008-2010) | All provinces missing 3 years; these years excluded from yield analysis |
-| Muchinga province formed in 2011 | Only 3 years of valid data (2011-2013); earlier years are zeros |
-| Zero yield records removed | Records with yield = 0 were excluded (assumed missing data) |
-| Seasonal yield data only | Cannot directly correlate monthly rainfall with yield at monthly resolution |
+| Missing yield data (2008-2010) | These years excluded from analysis |
+| Muchinga province formed in 2011 | Only 3 years available; limited reliability |
+| Zero yield records removed | Treated as missing data |
+| Seasonal yield data aggregation | Cannot directly correlate monthly rainfall with yield |
 
 ---
 
