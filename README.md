@@ -1,6 +1,6 @@
 # Rainfall Variability and Its Effect on Maize Yield in Zambia (1986-2013)
 
-This analysis examines how seasonal rainfall influences maize yield across ten provinces of Zambia. The analysis includes Muchinga province, which was formed in 2011 and has limited data.
+This analysis examines how inter‑annual rainfall variability and monthly rainfall distribution influence maize yield across nine provinces of Zambia. Rather than assuming total seasonal rainfall drives yield variation, this analysis tests whether rainfall timing and provincial rainfall “signatures” better explain yield outcomes.
 
 ## Table of Contents
 - [Research Questions](#research-questions)
