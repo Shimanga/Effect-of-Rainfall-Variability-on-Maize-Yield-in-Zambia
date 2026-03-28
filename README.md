@@ -376,15 +376,17 @@ Total seasonal rainfall explains only 1.9% of yield variation nationally. This i
 
 ## Repository Structure
 
-| Folder | File | Description |
-|--------|------|-------------|
-| DATA/ | Final_rainfall_and_yield_data.xlsx | Yield and seasonal rainfall data (454 records) |
-| DATA/ | rainfall_analysis_rf_rfq.csv | Monthly rainfall data (8,150 records) |
-| PYTHON/ | yield_analysis.py | Yield-rainfall relationship analysis |
-| PYTHON/ | monthly_rainfall_analysis.py | Monthly rainfall pattern analysis |
-| REPORTS/ | README.md | This report with all findings and interpretations |
+DATA/
+  maize_yield_data.csv
+  rainfall_monthly_data.csv
 
-### Data Citation
+PYTHON/
+  data_cleaning.py
+  rainfall_yield_analysis.py
+  pattern_analysis.py
 
-Maize yield and rainfall data for Zambian provinces, 1986-2013. Monthly rainfall data 1981-2026. Note: Muchinga province formed in 2011 (3 years yield data); 2008-2010 yield data missing for all provinces.
-```
+REPORT/
+  README.md  
+
+### Summary
+This study finds that total seasonal rainfall is a weak predictor of maize yield in Zambia, while monthly rainfall distribution provides more meaningful explanatory insight. The findings support a shift toward more granular climate analysis in agricultural research.
