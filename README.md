@@ -1,6 +1,6 @@
 # Rainfall Variability and Its Effect on Maize Yield in Zambia (1986-2013)
 
-This analysis examines how seasonal rainfall influences maize yield across ten provinces of Zambia. The analysis includes Muchinga province, which was previously excluded due to data limitations but now has sufficient yield data for inclusion.
+This analysis examines how seasonal rainfall influences maize yield across ten provinces of Zambia. The analysis includes Muchinga province, which was formed in 2011 and has limited data.
 
 ## Table of Contents
 - [Research Questions](#research-questions)
@@ -25,23 +25,27 @@ This analysis examines how seasonal rainfall influences maize yield across ten p
 
 ## Data Summary
 
-- **Time period:** 1986-2013
+- **Time period (yield):** 1986-2013
+- **Time period (rainfall):** 1981-2026
 - **Provinces analyzed:** 10 (including Muchinga)
 - **Observations:** 454 records (after filtering zero yields)
 - **Rainfall range:** 445 mm - 1,537 mm (seasonal total)
 - **Yield range:** 0.19 - 3.58 t/ha
 
-### Data Quality Notes
+### Critical Data Limitations
 
-| Note | Description |
-|------|-------------|
-| Zero yields removed | Records with yield = 0 were excluded (assumed missing data) |
-| Muchinga included | Now has sufficient data for analysis (2003-2013) |
-| Complete coverage | All 10 provinces represented |
+| Limitation | Impact |
+|------------|--------|
+| Missing yield data (2008-2010) | All provinces missing 3 years; these years excluded from yield analysis |
+| Muchinga province formed in 2011 | Only 3 years of valid data (2011-2013); earlier years are zeros |
+| Zero yield records removed | Records with yield = 0 were excluded (assumed missing data) |
+| Seasonal yield data only | Cannot directly correlate monthly rainfall with yield at monthly resolution |
 
 ---
 
 ## Dataset Structure
+
+### Yield Dataset
 
 | Column | Description |
 |--------|-------------|
@@ -66,23 +70,26 @@ This analysis examines how seasonal rainfall influences maize yield across ten p
 
 ### By Province
 
-| Province | Records | Mean Rainfall (mm) | Mean Yield (t/ha) | Rainfall-Yield Correlation |
-|----------|---------|-------------------|------------------|---------------------------|
-| Central | 27 | 1,128 | 2.39 | 0.294 |
-| Copperbelt | 27 | 1,059 | 2.15 | 0.315 |
-| Eastern | 27 | 859 | 1.45 | 0.170 |
-| Luapula | 27 | 1,108 | 1.88 | -0.476 |
-| Lusaka | 27 | 689 | 1.91 | 0.453 |
-| Muchinga | 12 | 823 | 1.86 | -0.117 |
-| North-Western | 27 | 975 | 1.63 | -0.277 |
-| Northern | 27 | 768 | 1.99 | -0.298 |
-| Southern | 27 | 1,098 | 1.51 | -0.258 |
-| Western | 27 | 891 | 0.83 | 0.161 |
+| Province | Records | Valid Years | Mean Rainfall (mm) | Mean Yield (t/ha) | Rainfall-Yield Correlation |
+|----------|---------|-------------|-------------------|------------------|---------------------------|
+| Central | 27 | 1986-2013 | 1,128 | 2.39 | 0.294 |
+| Copperbelt | 27 | 1986-2013 | 1,059 | 2.15 | 0.315 |
+| Eastern | 27 | 1986-2013 | 859 | 1.45 | 0.170 |
+| Luapula | 27 | 1986-2013 | 1,108 | 1.88 | -0.476 |
+| Lusaka | 27 | 1986-2013 | 689 | 1.91 | 0.453 |
+| **Muchinga** | **3** | **2011-2013 only** | **823** | **1.86** | **-0.117** |
+| North-Western | 27 | 1986-2013 | 975 | 1.63 | -0.277 |
+| Northern | 27 | 1986-2013 | 768 | 1.99 | -0.298 |
+| Southern | 27 | 1986-2013 | 1,098 | 1.51 | -0.258 |
+| Western | 27 | 1986-2013 | 891 | 0.83 | 0.161 |
 
 **Key Observations:**
+- 9 provinces have full 24-year coverage (1986-2013)
+- Muchinga has only 3 years (2011-2013) since province formation
+- Missing yield data for 2008-2010 affects all provinces
 - Central and Copperbelt have highest yields (>2.1 t/ha)
 - Western has lowest yields (0.83 t/ha) despite moderate rainfall
-- Muchinga yields (1.86 t/ha) are above national average
+- Muchinga yields (1.86 t/ha) are based on limited data; trends should be interpreted with caution
 
 ---
 
@@ -101,20 +108,20 @@ This analysis examines how seasonal rainfall influences maize yield across ten p
 **Strongest relationships:**
 - **Luapula (-0.476)**: High-rainfall province where excess moisture likely reduces yields
 - **Lusaka (0.453)**: Driest province where rainfall is a limiting factor
-- **Copperbelt (0.315)**: Moderate correlation
+- **Copperbelt (0.315)**: Moderate positive correlation
 
 ### 2. Rainfall Efficiency by Province
 
 | Province | Efficiency (t/ha per 100mm) | vs. National Avg | Ranking |
 |----------|----------------------------|------------------|---------|
 | Lusaka | 0.289 | +55% | 1 |
-| Central | 0.212 | +14% | 2 |
-| Copperbelt | 0.204 | +10% | 3 |
-| Northern | 0.263 | +41% | 4 |
-| Muchinga | 0.231 | +24% | 5 |
-| Eastern | 0.169 | -9% | 6 |
-| North-Western | 0.168 | -10% | 7 |
-| Luapula | 0.170 | -9% | 8 |
+| Northern | 0.263 | +41% | 2 |
+| Muchinga | 0.231 | +24% | 3 |
+| Central | 0.212 | +14% | 4 |
+| Copperbelt | 0.204 | +10% | 5 |
+| Luapula | 0.170 | -9% | 6 |
+| Eastern | 0.169 | -9% | 7 |
+| North-Western | 0.168 | -10% | 8 |
 | Southern | 0.138 | -26% | 9 |
 | Western | 0.093 | -50% | 10 |
 
@@ -122,8 +129,9 @@ This analysis examines how seasonal rainfall influences maize yield across ten p
 
 **Key Insights:**
 - Lusaka is 3× more efficient than Western province
-- Northern shows strong efficiency despite high rainfall
+- Northern shows strong efficiency despite moderate rainfall
 - Western's low efficiency suggests soil constraints or management issues
+- Muchinga's efficiency (0.231) is above national average, but based on only 3 years
 
 ### 3. Optimal Rainfall Range
 
@@ -148,8 +156,8 @@ This analysis examines how seasonal rainfall influences maize yield across ten p
 | Lusaka | 20 | 74% | Most vulnerable |
 | Southern | 10 | 37% | High |
 | Eastern | 8 | 30% | High |
+| Muchinga | 3 | 100% | High (limited data) |
 | Northern | 5 | 19% | Moderate |
-| Muchinga | 3 | 25% | Moderate |
 | Western | 3 | 11% | Low |
 | North-Western | 1 | 4% | Low |
 | Central | 0 | 0% | Least vulnerable |
@@ -177,7 +185,7 @@ This analysis examines how seasonal rainfall influences maize yield across ten p
 | Eastern | 1.39 | 1.48 | -6% |
 | Luapula | N/A | 1.88 | - |
 | Lusaka | 1.83 | 2.14 | -14% |
-| Muchinga | 1.61 | 1.94 | -17% |
+| Muchinga | 1.61 | N/A | - |
 | North-Western | 1.10 | 1.65 | -33% |
 | Northern | 1.79 | 2.04 | -12% |
 | Southern | 1.44 | 1.55 | -7% |
@@ -193,6 +201,9 @@ This analysis examines how seasonal rainfall influences maize yield across ten p
 - **R² = 0.019** - Rainfall explains 1.9% of yield variation
 - **Coefficient**: 0.0003 (not statistically significant)
 
+### Quadratic Model (National)
+- **R² = 0.020** - No improvement; no evidence of strong nonlinear relationship
+
 ### Provincial Regression Models
 
 | Province | R² | Coefficient | P-value | Interpretation |
@@ -202,11 +213,11 @@ This analysis examines how seasonal rainfall influences maize yield across ten p
 | Eastern | 0.029 | 0.0005 | 0.428 | Not significant |
 | **Luapula** | 0.227 | -0.0009 | **0.019** | Significant negative |
 | **Lusaka** | 0.205 | 0.0016 | **0.027** | Significant positive |
+| Muchinga | 0.014 | -0.0003 | 0.714 | Not significant (limited data) |
 | North-Western | 0.077 | -0.0005 | 0.191 | Not significant |
 | Northern | 0.089 | -0.0007 | 0.156 | Not significant |
 | Southern | 0.066 | -0.0005 | 0.226 | Not significant |
 | Western | 0.026 | 0.0004 | 0.452 | Not significant |
-| Muchinga | 0.014 | -0.0003 | 0.714 | Not significant |
 
 **Statistically significant relationships:**
 - **Lusaka**: Each additional 100mm rainfall increases yield by 0.16 t/ha
@@ -222,6 +233,7 @@ This analysis examines how seasonal rainfall influences maize yield across ten p
 - **Yield improvement**: From ~1.2 t/ha (1986) to ~2.3 t/ha (2013)
 
 ### Provincial Yield Trends
+
 | Province | Trend | 1986-1995 Avg | 2004-2013 Avg | Improvement |
 |----------|-------|---------------|---------------|-------------|
 | Central | Increasing | 2.12 | 2.61 | +23% |
@@ -239,6 +251,7 @@ This analysis examines how seasonal rainfall influences maize yield across ten p
 - Eastern and Lusaka show strongest yield growth (>30% improvement)
 - Western and Southern show no improvement over time
 - Luapula yields stable despite high rainfall
+- Muchinga data only available from 2011 onward
 
 ---
 
@@ -260,7 +273,8 @@ Total seasonal rainfall explains only 1.9% of yield variation nationally. This i
 | Lusaka most drought-vulnerable | 74% of years below 800 mm |
 | Luapula negative rainfall correlation | Excess moisture reduces yields |
 | Western least efficient | 0.093 t/ha per 100mm vs national 0.187 |
-| Muchinga yields above average | Performs well despite limited data |
+| Missing data (2008-2010) | 3 years excluded from all provinces |
+| Muchinga limited data | Province formed 2011; only 3 years available |
 | Yield growth varies | Eastern (+34%), Western (-2%) |
 
 ### Policy Implications
@@ -271,9 +285,11 @@ Total seasonal rainfall explains only 1.9% of yield variation nationally. This i
 
 3. **Efficiency gap**: Knowledge transfer from Lusaka/Central to Western/Southern
 
-4. **Muchinga**: Include in future analysis; shows promising yields
+4. **Muchinga caution**: Only 3 years of data (2011-2013). Continue monitoring as more years become available to establish reliable trends.
 
-5. **Variety selection**: Match to provincial rainfall patterns
+5. **Data gaps**: 2008-2010 missing for all provinces. Consider supplementing with alternative data sources if needed.
+
+6. **Variety selection**: Match to provincial rainfall patterns
 
 ---
 
@@ -287,4 +303,4 @@ Total seasonal rainfall explains only 1.9% of yield variation nationally. This i
 
 ### Data Citation
 
-Maize yield and rainfall data for Zambian provinces, 1986-2013. Cleaned dataset includes 454 records across 10 provinces.
+Maize yield and rainfall data for Zambian provinces, 1986-2013. Cleaned dataset includes 454 records across 10 provinces. Note: Muchinga province formed in 2011 (3 years data); 2008-2010 missing for all provinces.
