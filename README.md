@@ -172,7 +172,9 @@ Low rainfall is associated with reduced yields
 | Copperbelt | 0 | 0% | Least vulnerable |
 | Luapula | 0 | 0% | Least vulnerable |
 
-### 5. Rainfall Years
+### 5. Rainfall Range
+
+Yield increases across observed rainfall levels
 
 | Category | Threshold | Observations | Mean Yield | Difference |
 |----------|-----------|--------------|------------|------------|
@@ -183,9 +185,9 @@ Low rainfall is associated with reduced yields
 
 ---
 
-## Key Findings: Monthly Rainfall Patterns
+## Results: Monthly Rainfall Patterns
 
-### 6. Provincial Rainfall Patterns Reveal Distinct "Signatures"
+### 6. Provincial Rainfall Distribution Patterns
 
 Analysis of 45 years of monthly rainfall data (1981–2026) reveals that provinces have unique rainfall distributions during the growing season (October–March). This explains why a single seasonal total can have different effects in different regions.
 
