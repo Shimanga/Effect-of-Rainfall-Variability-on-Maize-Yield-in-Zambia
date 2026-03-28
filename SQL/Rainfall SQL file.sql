@@ -49,26 +49,19 @@ SET province = CASE [PCODE]
 --FROM dbo.[rainfall]
 --WHERE rfh >500
 
---Create new table and combine for adm level 1
+--Create new table for seasonal taotals and combine for adm level 1
 
-SELECT dbo.[rainfall_from_oct_to_march].[PCODE], 
-dbo.[rainfall_from_oct_to_march].[season_year],
-dbo.[rainfall_from_oct_to_march].[province],
-dbo.[rainfall].[adm_level],
-AVG ([rainfall_from_oct_to_march].[rfh]) AS avg_rfh
-INTO dbo.[rainfall_admlevel1_summary]
+SELECT 
+    province,
+    season_year,
+    SUM(rfh) AS seasonal_total_mm
+INTO dbo.[seasonal_rainfall_totals] 
 FROM dbo.[rainfall_from_oct_to_march]
-JOIN dbo.[rainfall]
-ON
-dbo.[rainfall_from_oct_to_march].[PCODE] = dbo.[rainfall].[PCODE]
-WHERE dbo.[rainfall].[adm_level] = 1
-GROUP BY
-dbo.[rainfall_from_oct_to_march].[PCODE], 
-dbo.[rainfall_from_oct_to_march].[season_year],
-dbo.[rainfall_from_oct_to_march].[province],
-dbo.[rainfall].[adm_level]
+WHERE adm_level = 1
+GROUP BY province, season_year
+ORDER BY province, season_year
 
 SELECT *
-FROM dbo.[rainfall_admlevel1_summary]
+FROM dbo.[seasonal_rainfall_totals]
 ORDER BY season_year
 
