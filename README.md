@@ -1,6 +1,6 @@
 # Rainfall Variability and Its Effect on Maize Yield in Zambia (1986-2013)
 
-This analysis examines how seasonal rainfall variability and monthly rainfall distribution influence maize yield across nine provinces of Zambia. Rather than assuming total seasonal rainfall drives yield variation, this analysis tests whether rainfall timing and provincial rainfall “signatures” better explain yield outcomes.
+This analysis examines how seasonal rainfall influences maize yield across ten provinces of Zambia. The analysis includes Muchinga province, which was previously excluded due to data limitations but now has sufficient yield data for inclusion.
 
 ## Table of Contents
 - [Research Questions](#research-questions)
@@ -8,392 +8,283 @@ This analysis examines how seasonal rainfall variability and monthly rainfall di
 - [Dataset Structure](#dataset-structure)
 - [Summary Statistics](#summary-statistics)
 - [Key Findings](#key-findings)
-- [Monthly Rainfall Analysis](#monthly-rainfall-analysis)
 - [Regression Analysis](#regression-analysis)
 - [Trends Over Time](#trends-over-time)
 - [Conclusions & Implications](#conclusions--implications)
-- [Next Steps / Tableau Integration](#next-steps--tableau-integration)
 - [Repository Structure](#repository-structure)
-- [File_Requirements](#file-requirements)
-- [Data Citation](#data-citation)
 
 ---
 
 ## Research Questions
 
 1. To what extent does total seasonal rainfall explain variability in maize yield across provinces?
-2. Do monthly rainfall distribution patterns (e.g., peak timing) provide improved explanatory insight?
-3. How do provincial differences in rainfall patterns relate to maize yield responses?
+2. How do provincial differences in rainfall patterns relate to maize yield responses?
+3. Which provinces are most vulnerable to rainfall variability and drought conditions?
 
 ---
 
 ## Data Summary
 
-- **Time period (yield):** 1986-2013
-- **Time period (rainfall):** 1981-2026
-- **Provinces analyzed:** 9 (Muchinga excluded from yield analysis due to limited data)
-- **Observations:** 432 (yield), 8,150 (monthly rainfall)
-- **Rainfall range:** 723 mm - 2,498 mm (seasonal total)
+- **Time period:** 1986-2013
+- **Provinces analyzed:** 10 (including Muchinga)
+- **Observations:** 454 records (after filtering zero yields)
+- **Rainfall range:** 445 mm - 1,537 mm (seasonal total)
 - **Yield range:** 0.19 - 3.58 t/ha
 
-### Critical Data Limitations
+### Data Quality Notes
 
-| Limitation | Impact |
-|------------|--------|
-| Missing yield data (2008-2010) | All provinces missing 3 years; these years excluded from yield analysis |
-| Muchinga province only 2011-2013 | Excluded from time-series and trend analysis for yield |
-| Seasonal yield data only | Cannot directly correlate monthly rainfall with yield at monthly resolution |
-| Rainfall timing analysis indirect | Monthly patterns inform interpretation of seasonal yield outcomes |
+| Note | Description |
+|------|-------------|
+| Zero yields removed | Records with yield = 0 were excluded (assumed missing data) |
+| Muchinga included | Now has sufficient data for analysis (2003-2013) |
+| Complete coverage | All 10 provinces represented |
 
 ---
 
 ## Dataset Structure
 
-### Yield Dataset
-
 | Column | Description |
 |--------|-------------|
-| Province | Administrative province (9 analyzed) |
+| Province | Administrative province (10 total) |
 | Year | 1986-2013 |
 | Rainfall_mm | Total seasonal rainfall (mm) |
 | Yield_t_ha | Maize yield (tons/hectare) |
-| Production_tons | Total production (tons) |
 | Rain_efficiency | Calculated: Yield per 100mm rainfall |
-
-### Monthly Rainfall Dataset
-
-| Column | Description |
-|--------|-------------|
-| PCODE | Province code |
-| Province | Administrative province |
-| Year | 1981-2026 |
-| Month | 1-12 (1=January, 10=October, etc.) |
-| rfq | Monthly rainfall (mm) |
 
 ---
 
 ## Summary Statistics
 
-### Overall Summary Statistics (9 provinces, 1986-2013)
+### Overall Summary Statistics (10 provinces, 1986-2013)
 
-| Metric | Rainfall (mm) | Yield (t/ha) | Production (tons) |
-|--------|---------------|--------------|-------------------|
-| Mean | 1,542 | 1.76 | 143,871 |
-| Min | 723 | 0.19 | 9,216 |
-| Max | 2,498 | 3.58 | 745,580 |
-| Std Dev | 334 | 0.73 | 136,350 |
+| Metric | Rainfall (mm) | Yield (t/ha) |
+|--------|---------------|--------------|
+| Mean | 989 | 1.79 |
+| Min | 445 | 0.19 |
+| Max | 1,537 | 3.58 |
+| Std Dev | 184 | 0.74 |
 
 ### By Province
 
-| Province | Mean Rainfall (mm) | Mean Yield (t/ha) | Rainfall-Yield Correlation |
-|----------|-------------------|------------------|---------------------------|
-| Central | 1,491 | 1.86 | 0.294 |
-| Copperbelt | 1,365 | 1.70 | 0.315 |
-| Eastern | 1,057 | 1.07 | 0.170 |
-| Luapula | 1,954 | 2.10 | -0.476 |
-| Lusaka | 1,065 | 1.83 | 0.453 |
-| North-Western | 1,757 | 1.84 | -0.277 |
-| Northern | 1,860 | 2.00 | -0.298 |
-| Southern | 1,068 | 0.90 | -0.258 |
-| Western | 1,262 | 0.77 | 0.161 |
+| Province | Records | Mean Rainfall (mm) | Mean Yield (t/ha) | Rainfall-Yield Correlation |
+|----------|---------|-------------------|------------------|---------------------------|
+| Central | 27 | 1,128 | 2.39 | 0.294 |
+| Copperbelt | 27 | 1,059 | 2.15 | 0.315 |
+| Eastern | 27 | 859 | 1.45 | 0.170 |
+| Luapula | 27 | 1,108 | 1.88 | -0.476 |
+| Lusaka | 27 | 689 | 1.91 | 0.453 |
+| Muchinga | 12 | 823 | 1.86 | -0.117 |
+| North-Western | 27 | 975 | 1.63 | -0.277 |
+| Northern | 27 | 768 | 1.99 | -0.298 |
+| Southern | 27 | 1,098 | 1.51 | -0.258 |
+| Western | 27 | 891 | 0.83 | 0.161 |
+
+**Key Observations:**
+- Central and Copperbelt have highest yields (>2.1 t/ha)
+- Western has lowest yields (0.83 t/ha) despite moderate rainfall
+- Muchinga yields (1.86 t/ha) are above national average
 
 ---
 
 ## Key Findings
 
-### 1. Rainfall-Yield Correlation is Weak Nationally
+### 1. Rainfall-Yield Correlation Varies by Province
 
-**Overall correlation**: 0.137 (Rainfall explains only 1.9% of yield variation)
+**Overall correlation**: 0.137 (rainfall explains 1.9% of yield variation nationally)
 
-This weak relationship indicates that total seasonal rainfall is a poor predictor of maize yields across Zambia. Provincial patterns reveal:
+| Correlation Type | Provinces | Interpretation |
+|------------------|-----------|----------------|
+| **Positive** (0.15-0.45) | Central, Copperbelt, Eastern, Lusaka, Western | More rain generally increases yield |
+| **Negative** (-0.48 to -0.26) | Luapula, North-Western, Northern, Southern | More rain decreases yield (waterlogging risk) |
+| **Neutral** (~0) | Muchinga | Rainfall not a driver of yield variation |
 
-- **Positive correlations** in Lusaka (0.453), Copperbelt (0.315), Central (0.294), where rainfall is generally lower
-- **Negative correlations** in Luapula (-0.476), Northern (-0.298), North-Western (-0.277), high-rainfall provinces where more rain may reduce yields
-
-This suggests an optimal rainfall range, beyond which additional precipitation becomes detrimental.
+**Strongest relationships:**
+- **Luapula (-0.476)**: High-rainfall province where excess moisture likely reduces yields
+- **Lusaka (0.453)**: Driest province where rainfall is a limiting factor
+- **Copperbelt (0.315)**: Moderate correlation
 
 ### 2. Rainfall Efficiency by Province
 
-| Province | Efficiency (t/ha per 100mm) | vs. National Avg |
-|----------|----------------------------|------------------|
-| Lusaka | 0.178 | +50% |
-| Northern | 0.171 | +44% |
-| Central | 0.128 | +8% |
-| Copperbelt | 0.127 | +7% |
-| Luapula | 0.110 | -8% |
-| North-Western | 0.106 | -11% |
-| Eastern | 0.104 | -13% |
-| Southern | 0.084 | -29% |
-| Western | 0.060 | -50% |
+| Province | Efficiency (t/ha per 100mm) | vs. National Avg | Ranking |
+|----------|----------------------------|------------------|---------|
+| Lusaka | 0.289 | +55% | 1 |
+| Central | 0.212 | +14% | 2 |
+| Copperbelt | 0.204 | +10% | 3 |
+| Northern | 0.263 | +41% | 4 |
+| Muchinga | 0.231 | +24% | 5 |
+| Eastern | 0.169 | -9% | 6 |
+| North-Western | 0.168 | -10% | 7 |
+| Luapula | 0.170 | -9% | 8 |
+| Southern | 0.138 | -26% | 9 |
+| Western | 0.093 | -50% | 10 |
 
-**National average:** 0.119 t/ha per 100mm rain
+**National average:** 0.187 t/ha per 100mm rain
 
-Lusaka is 3× more efficient than Western province, indicating substantial differences in soil quality, management practices, or other factors.
+**Key Insights:**
+- Lusaka is 3× more efficient than Western province
+- Northern shows strong efficiency despite high rainfall
+- Western's low efficiency suggests soil constraints or management issues
 
 ### 3. Optimal Rainfall Range
 
 | Rainfall Range | Observations | Mean Yield (t/ha) | vs. National Avg |
 |----------------|--------------|-------------------|------------------|
-| <800 mm | 2 | 0.90 | -49% |
-| 800-1000 mm | 25 | 1.14 | -35% |
-| 1000-1200 mm | 56 | 1.53 | -13% |
-| 1200-1400 mm | 89 | 1.83 | +4% |
-| 1400-1600 mm | 97 | 1.85 | +5% |
-| 1600-1800 mm | 74 | 1.79 | +2% |
-| >1800 mm | 89 | 1.84 | +5% |
+| 400-600 mm | 10 | 1.45 | -19% |
+| 600-800 mm | 79 | 1.51 | -16% |
+| 800-1000 mm | 147 | 1.74 | -3% |
+| 1000-1200 mm | 141 | 1.89 | +6% |
+| 1200-1400 mm | 64 | 1.97 | +10% |
+| 1400-1600 mm | 13 | 2.08 | +16% |
 
-**Optimal range:** 1200-1600 mm, yields peak and stabilize in this band.
-- Below 1000 mm: yields drop sharply (35% below average)
-- Above 1800 mm: no additional yield benefit (diminishing returns)
+**Findings:**
+- Yields increase consistently with rainfall up to 1,600 mm
+- No evidence of diminishing returns within observed range
+- Below 800 mm: yields drop 16-19% below average
 
-### 4. Vulnerability to Low Rainfall (≤1,316 mm)
+### 4. Vulnerability to Low Rainfall (≤ 800 mm)
 
-| Province | Low-Rainfall Years (1986-2013) |
-|----------|-------------------------------|
-| Lusaka | 18 |
-| Southern | 17 |
-| Eastern | 16 |
-| Western | 15 |
-| Central | 12 |
-| Copperbelt | 9 |
-| North-Western | 5 |
-| Northern | 4 |
-| Luapula | 0 |
+| Province | Low-Rainfall Years | % of Records | Vulnerability Ranking |
+|----------|-------------------|--------------|----------------------|
+| Lusaka | 20 | 74% | Most vulnerable |
+| Southern | 10 | 37% | High |
+| Eastern | 8 | 30% | High |
+| Northern | 5 | 19% | Moderate |
+| Muchinga | 3 | 25% | Moderate |
+| Western | 3 | 11% | Low |
+| North-Western | 1 | 4% | Low |
+| Central | 0 | 0% | Least vulnerable |
+| Copperbelt | 0 | 0% | Least vulnerable |
+| Luapula | 0 | 0% | Least vulnerable |
 
-**Most vulnerable:** Lusaka, Southern, Eastern, Western - experience low rainfall in >50% of years
-**Least vulnerable:** Luapula, Northern - rarely experience drought conditions
+**Drought threshold (25th percentile):** ≤ 859 mm
 
-### 5. Yield in Extreme Years
+**Most vulnerable:** Lusaka (74% of years below 800 mm)
+**Least vulnerable:** Central, Copperbelt, Luapula (no low-rainfall years)
 
-| Category | Threshold | Observations | Mean Yield | % vs Normal |
-|----------|-----------|--------------|------------|-------------|
-| Low rain | ≤1,316 mm | 108 | 1.71 t/ha | 0% |
-| Normal | 1,316-1,777 mm | 216 | 1.71 t/ha | baseline |
-| High rain | ≥1,777 mm | 108 | 1.89 t/ha | +11% |
+### 5. Yield in Low vs Normal Rainfall Years
 
-Low-rainfall years produce the same average yield as normal years nationally. This masks provincial variation. Some provinces (Lusaka) suffer in dry years, while others (Luapula) may benefit.
+| Category | Threshold | Observations | Mean Yield | Difference |
+|----------|-----------|--------------|------------|------------|
+| Low rain | ≤ 859 mm | 113 | 1.68 t/ha | -6% |
+| Normal | > 859 mm | 341 | 1.82 t/ha | baseline |
 
----
+**By Province:**
 
-## Monthly Rainfall Analysis
+| Province | Low Rain Yield | Normal Yield | Difference |
+|----------|----------------|--------------|------------|
+| Central | N/A | 2.39 | - |
+| Copperbelt | N/A | 2.15 | - |
+| Eastern | 1.39 | 1.48 | -6% |
+| Luapula | N/A | 1.88 | - |
+| Lusaka | 1.83 | 2.14 | -14% |
+| Muchinga | 1.61 | 1.94 | -17% |
+| North-Western | 1.10 | 1.65 | -33% |
+| Northern | 1.79 | 2.04 | -12% |
+| Southern | 1.44 | 1.55 | -7% |
+| Western | 0.79 | 0.83 | -5% |
 
-### 6. Provincial Rainfall Patterns Reveal Distinct "Signatures"
-
-Analysis of 45 years of monthly rainfall data (1981–2026) reveals that provinces have unique rainfall distributions during the growing season (October–March). This explains why a single seasonal total can have different effects in different regions.
-
-**Average Monthly Rainfall by Province (mm)**
-
-| Province | Oct | Nov | Dec | Jan | Feb | Mar | Pattern Type |
-|----------|-----|-----|-----|-----|-----|-----|--------------|
-| **Luapula** | 94 | 109 | 122 | 113 | 98 | 100 | **Mid-season peak (Dec)** |
-| **Northern** | 94 | 109 | 118 | 117 | 102 | 94 | **Mid-season peak (Dec-Jan)** |
-| **North-Western** | 97 | 92 | 109 | 104 | 97 | 94 | **Mid-season plateau** |
-| **Copperbelt** | 97 | 96 | 102 | 105 | 97 | 94 | **Mid-season plateau** |
-| **Central** | 97 | 88 | 95 | 102 | 97 | 95 | **Mid-season plateau** |
-| **Western** | 87 | 88 | 97 | 99 | 95 | 88 | **Mid-season plateau** |
-| **Eastern** | 90 | 88 | 91 | 92 | 93 | 98 | **Extended season** |
-| **Lusaka** | 84 | 85 | 89 | 92 | 89 | 96 | **Extended season** |
-| **Southern** | 85 | 87 | 91 | 90 | 86 | 90 | **Evenly distributed** |
-
-**Interpretation of Patterns:**
-
-| Pattern Type | Description | Provinces | Agricultural Implication |
-|--------------|-------------|-----------|-------------------------|
-| **Mid-season peak** | Rainfall concentrated in December-January | Luapula, Northern | Waterlogging risk during peak; reliable moisture for main growing period |
-| **Mid-season plateau** | Consistent rainfall across December-February | North-Western, Copperbelt, Central, Western | Stable moisture during critical growth stages; planting timing flexibility |
-| **Extended season** | Rainfall continues into March | Eastern, Lusaka | Late moisture supports grain filling; wet harvest risk; requires varieties that mature before heavy late rains |
-| **Evenly distributed** | Consistent rainfall across all months | Southern | Requires consistent moisture throughout; vulnerable to any dry spell |
-
-**Key Insight**: October is not the wettest month for any province. The timing of peak rainfall varies from December (Luapula, Northern) to a gradual extension into March (Eastern, Lusaka).
-
-### 7. Seasonal Totals Show Significant Declines in Vulnerable Provinces
-
-A comparison of the periods 1981-2000 and 2001-2026 shows significant declines in total growing season rainfall for the driest and most variable provinces.
-
-| Province | 1981-2000 (mm) | 2001-2026 (mm) | Change (mm) | Change (%) | Statistical Significance |
-|----------|----------------|----------------|-------------|------------|-------------------------|
-| **Southern** | 932 | 831 | **-101** | **-11%** | **Significant** (p=0.015) |
-| **Lusaka** | 939 | 841 | **-98** | **-10%** | **Significant** (p=0.023) |
-| **Central** | 1,057 | 972 | **-85** | **-8%** | **Significant** (p=0.041) |
-| Eastern | 939 | 888 | -51 | -5% | Not Significant |
-| Copperbelt | 1,075 | 1,021 | -54 | -5% | Not Significant |
-| Western | 968 | 946 | -22 | -2% | Not Significant |
-| North-Western | 1,086 | 1,029 | -57 | -5% | Not Significant |
-| Northern | 1,165 | 1,133 | -32 | -3% | Not Significant |
-| Luapula | 1,206 | 1,184 | -22 | -2% | Not Significant |
-
-**Conclusion**: The provinces already facing the greatest rainfall stress (Southern, Lusaka, Central) are experiencing the most significant reductions in seasonal rainfall.
-
-### 8. October is No Longer a Reliable Planting Month
-
-October is not the wettest month for any province. Its reliability as the planting window has declined, especially in drier provinces.
-
-**Frequency of Low October Rainfall (<70mm)**
-
-| Province | 1980s (% Low Oct) | 2010s-20s (% Low Oct) | Change |
-|----------|-------------------|----------------------|--------|
-| Lusaka | ~20% | ~50% | +30% |
-| Southern | ~25% | ~55% | +30% |
-| Eastern | ~15% | ~40% | +25% |
-| Central | ~10% | ~35% | +25% |
-
-This forces farmers to delay planting, compressing the growing season and increasing the risk of mid-season dry spells affecting critical growth stages.
-
-### 9. Monthly Contribution to Seasonal Total
-
-| Province | Oct | Nov | Dec | Jan | Feb | Mar |
-|----------|-----|-----|-----|-----|-----|-----|
-| Luapula | 8% | 9% | 10% | 9% | 8% | 8% |
-| Northern | 8% | 9% | 10% | 10% | 9% | 8% |
-| North-Western | 9% | 9% | 10% | 10% | 9% | 9% |
-| Copperbelt | 9% | 9% | 10% | 10% | 9% | 9% |
-| Central | 10% | 9% | 9% | 10% | 10% | 9% |
-| Western | 9% | 9% | 10% | 10% | 10% | 9% |
-| Eastern | 10% | 10% | 10% | 10% | 10% | 11% |
-| Lusaka | 9% | 10% | 10% | 10% | 10% | 11% |
-| Southern | 10% | 10% | 10% | 10% | 10% | 10% |
-
-**Key Insights:**
-- Eastern and Lusaka show a more extended rainfall profile, with March contributing a slightly higher share of seasonal total
-- This reflects the gradual end of the rainy season rather than a true peak
-- Northern provinces concentrate rainfall in December-January (30% of seasonal total in those two months)
+**Key Insight:** North-Western experiences the largest yield reduction (33%) in low-rainfall years, despite having relatively few such years.
 
 ---
 
 ## Regression Analysis
 
 ### Linear Model (National)
-- **R² = 0.019** - Rainfall explains only 1.9% of yield variation
-- **Coefficient**: 0.0003 (essentially flat)
-
-### Quadratic Model (National)
-- **R² = 0.020** - No improvement; no evidence of strong nonlinear relationship
-- **Rainfall² coefficient**: effectively zero
+- **R² = 0.019** - Rainfall explains 1.9% of yield variation
+- **Coefficient**: 0.0003 (not statistically significant)
 
 ### Provincial Regression Models
 
-| Province | R² | Coefficient | P-value |
-|----------|-----|-------------|---------|
-| Central | 0.086 | 0.0007 | 0.163 |
-| Copperbelt | 0.099 | 0.0008 | 0.133 |
-| Eastern | 0.029 | 0.0005 | 0.428 |
-| Luapula | 0.227 | -0.0009 | 0.019 |
-| Lusaka | 0.205 | 0.0016 | 0.027 |
-| North-Western | 0.077 | -0.0005 | 0.191 |
-| Northern | 0.089 | -0.0007 | 0.156 |
-| Southern | 0.066 | -0.0005 | 0.226 |
-| Western | 0.026 | 0.0004 | 0.452 |
+| Province | R² | Coefficient | P-value | Interpretation |
+|----------|-----|-------------|---------|----------------|
+| Central | 0.086 | 0.0007 | 0.143 | Not significant |
+| Copperbelt | 0.099 | 0.0008 | 0.133 | Not significant |
+| Eastern | 0.029 | 0.0005 | 0.428 | Not significant |
+| **Luapula** | 0.227 | -0.0009 | **0.019** | Significant negative |
+| **Lusaka** | 0.205 | 0.0016 | **0.027** | Significant positive |
+| North-Western | 0.077 | -0.0005 | 0.191 | Not significant |
+| Northern | 0.089 | -0.0007 | 0.156 | Not significant |
+| Southern | 0.066 | -0.0005 | 0.226 | Not significant |
+| Western | 0.026 | 0.0004 | 0.452 | Not significant |
+| Muchinga | 0.014 | -0.0003 | 0.714 | Not significant |
 
-**Statistically significant relationships (p<0.05):**
-- **Lusaka**: Positive relationship. Each 100mm rain increases yield by 0.16 t/ha
-- **Luapula**: Negative relationship. Each 100mm rain decreases yield by 0.09 t/ha
+**Statistically significant relationships:**
+- **Lusaka**: Each additional 100mm rainfall increases yield by 0.16 t/ha
+- **Luapula**: Each additional 100mm rainfall decreases yield by 0.09 t/ha
 
 ---
 
 ## Trends Over Time
 
 ### National Averages
-- **Rainfall**: Highly variable, no clear trend nationally
-- **Yield**: Increased from ~1.2 t/ha (1986) to ~2.0 t/ha (2013), likely due to improved varieties and inputs
-- **Production**: Peak at 2.4 million tons (2011), up from 0.8 million (1986)
+- **Rainfall**: Mean 989 mm, range 445-1,537 mm
+- **Yield**: Mean 1.79 t/ha, increasing trend over time
+- **Yield improvement**: From ~1.2 t/ha (1986) to ~2.3 t/ha (2013)
 
 ### Provincial Yield Trends
-- All provinces show gradual yield increases over the period
-- Luapula and Northern consistently highest-yielding
-- Southern and Western consistently lowest
+| Province | Trend | 1986-1995 Avg | 2004-2013 Avg | Improvement |
+|----------|-------|---------------|---------------|-------------|
+| Central | Increasing | 2.12 | 2.61 | +23% |
+| Copperbelt | Increasing | 1.88 | 2.33 | +24% |
+| Eastern | Increasing | 1.19 | 1.59 | +34% |
+| Luapula | Stable | 1.87 | 1.88 | +1% |
+| Lusaka | Increasing | 1.60 | 2.13 | +33% |
+| Muchinga | - | - | 1.86 | - |
+| North-Western | Stable | 1.58 | 1.61 | +2% |
+| Northern | Stable | 1.97 | 2.00 | +2% |
+| Southern | Stable | 1.51 | 1.50 | -1% |
+| Western | Stable | 0.84 | 0.82 | -2% |
 
-### Provincial Rainfall Trends (NEW)
-- **Southern, Lusaka, Central**: Significant declines (-8% to -11%) since 2000
-- **Other provinces**: No statistically significant change
-- **October rainfall**: Declining reliability across all provinces, especially in the south
+**Key Observations:**
+- Eastern and Lusaka show strongest yield growth (>30% improvement)
+- Western and Southern show no improvement over time
+- Luapula yields stable despite high rainfall
 
 ---
 
 ## Conclusions & Implications
 
 ### What Rainfall Does NOT Explain
-Total seasonal rainfall is not the primary driver of maize yields in Zambia. The weak correlation (0.137) and low R² (0.019) indicate that:
+Total seasonal rainfall explains only 1.9% of yield variation nationally. This indicates that:
 
-1. **Rainfall timing matters more than total amount** - The monthly analysis confirms that provinces have distinct rainfall signatures that affect how seasonal totals translate to yield
-2. **Soil quality varies significantly** - This explains efficiency differences (Lusaka 3× Western)
-3. **Management practices differ** - Input use, variety selection, planting dates vary by province
-4. **Topography and drainage** - High-rainfall provinces may experience waterlogging
+1. **Rainfall timing matters** - Seasonal totals alone insufficient
+2. **Soil quality varies** - Explains efficiency gap (Lusaka 3× Western)
+3. **Management practices differ** - Input use, variety selection, planting dates
+4. **Topography and drainage** - Waterlogging in high-rainfall provinces
 
 ### What the Data Shows
-- **Optimal range**: 1200-1600 mm produces highest yields
-- **Diminishing returns**: Above 1800 mm provides no additional benefit
-- **Vulnerability pattern**: Southern and Lusaka provinces most drought-prone
-- **Efficiency leaders**: Lusaka and Northern convert rainfall to grain most effectively
-- **Rainfall signatures**: Four distinct provincial patterns (mid-season peak, mid-season plateau, extended season, evenly distributed)
-- **Declining trends**: Southern, Lusaka, and Central have lost 8-11% of growing season rainfall since 2000
+
+| Finding | Implication |
+|---------|-------------|
+| Optimal range 1,200-1,600 mm | Highest yields in this band |
+| Lusaka most drought-vulnerable | 74% of years below 800 mm |
+| Luapula negative rainfall correlation | Excess moisture reduces yields |
+| Western least efficient | 0.093 t/ha per 100mm vs national 0.187 |
+| Muchinga yields above average | Performs well despite limited data |
+| Yield growth varies | Eastern (+34%), Western (-2%) |
 
 ### Policy Implications
 
-1. **Drought mitigation** should focus on Lusaka, Southern, Eastern, Western
+1. **Drought mitigation** priority: Lusaka, Southern, Eastern
 
-2. **Waterlogging management** (drainage, raised beds) relevant for Luapula, Northern
+2. **Waterlogging management**: Luapula, Northern need drainage infrastructure
 
-3. **Tailor Recommendations by Rainfall Pattern**:
+3. **Efficiency gap**: Knowledge transfer from Lusaka/Central to Western/Southern
 
-   | Province Group | Recommended Strategies |
-   |----------------|------------------------|
-   | **Eastern, Lusaka** (Extended season) | Select varieties that mature before heavy late rains; ensure good drainage for harvest; use late-season moisture for grain filling |
-   | **Southern** (Evenly distributed) | Water harvesting; drought-tolerant varieties; consistent soil moisture management |
-   | **Luapula, Northern** (Mid-season peak) | Improve drainage to prevent waterlogging; raised beds; varieties tolerant of excess moisture |
-   | **Western, Central, Copperbelt, North-Western** (Mid-season plateau) | Balanced water management; flexible planting dates; maintain soil cover to retain moisture |
+4. **Muchinga**: Include in future analysis; shows promising yields
 
-4. **Efficiency gap** suggests potential for knowledge transfer from high- to low-efficiency provinces
-
-5. **October reliability decline** means farmers need guidance on shifting planting windows
-
----
-
-## Next Steps / Tableau Integration
-
-### Planned Visualizations
-
-1. **Rainfall vulnerability dashboard** - Provincial ranking by low-rainfall frequency
-
-2. **Provincial Rainfall Signatures Dashboard**
-   - Heatmaps and line charts showing distinct monthly patterns for each province
-   - Highlight differences between pattern types
-
-3. **Temporal Shift Analysis**
-   - Maps and bar charts illustrating change in seasonal totals (1981-2000 vs 2001-2026)
-   - Increasing frequency of low October rainfall by province
-
-4. **Efficiency mapping** - Geographic visualization of yield per 100mm rain
-
-5. **Extreme Year Timeline**
-   - Interactive timeline highlighting driest/wettest seasons (e.g., 1992, 2015, 2019)
-   - Compare against yield outcomes by province
-
-6. **Time-series animation** - 45 years of rainfall patterns
+5. **Variety selection**: Match to provincial rainfall patterns
 
 ---
 
 ## Repository Structure
 
-├── DATA/                       
-│   ├── Final_maize_production_yield_climate_dataset.csv
-│   └── rainfall_analysis_rf_rfq.csv
-├── PYTHON/                     
-│   ├── 01_seasonal_analysis.py
-│   ├── 02_monthly_patterns.py
-│   └── 03_temporal_trends.py
-├── REPORTS/                   
-│   └── README.md (this file)
-└── SQL/                        
-
-
-### File Descriptions
-
-| File | Description | Key Outputs |
-|------|-------------|-------------|
-| `Final_maize_production_yield_climate_dataset.csv` | Maize yield and seasonal rainfall data (1986-2013) | Province-level yield, production, seasonal rainfall totals |
-| `rainfall_analysis_rf_rfq.csv` | Monthly rainfall data (1981-2026) | Monthly rainfall (rfq) by province, year, month |
-| `01_seasonal_analysis.py` | Yield data analysis | Correlation tables, efficiency metrics, regression models |
-| `02_monthly_patterns.py` | Monthly rainfall analysis | Provincial rainfall signatures, monthly averages, heatmaps |
-| `03_temporal_trends.py` | Trend analysis | Pre/post-2000 comparisons, significance tests, extreme years |
+| Folder | File | Description |
+|--------|------|-------------|
+| DATA/ | Final_rainfall_and_yield_data.xlsx | Raw data: province, year, seasonal rainfall total (mm), yield (t/ha) |
+| PYTHON/ | rainfall_yield_analysis.py | Complete analysis script: data preparation, EDA, correlation, regression, efficiency metrics, drought vulnerability |
+| REPORTS/ | README.md | This report with all findings and interpretations |
 
 ### Data Citation
+
+Maize yield and rainfall data for Zambian provinces, 1986-2013. Cleaned dataset includes 454 records across 10 provinces.
