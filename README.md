@@ -7,7 +7,7 @@ This study evaluates how rainfall variability influences maize yield across ten 
 - [Data Summary](#data-summary)
 - [Dataset Structure](#dataset-structure)
 - [Summary Statistics](#summary-statistics)
-- [Key Findings](#key-findings)
+- [Results](#results)
 - [Regression Analysis](#regression-analysis)
 - [Trends Over Time](#trends-over-time)
 - [Conclusions & Implications](#conclusions--implications)
@@ -62,7 +62,7 @@ This study evaluates how rainfall variability influences maize yield across ten 
 |--------|-------------|
 | Province | Administrative province (10 total) |
 | Year | 1981-2026 |
-| Month | 1-12 (1=January, 10=October, etc.) |
+| Month | 10-12/1-3 (1=January, 10=October, etc.) |
 | rfq | Monthly rainfall (mm) |
 
 ---
@@ -95,10 +95,11 @@ This study evaluates how rainfall variability influences maize yield across ten 
 
 ---
 
-## Key Findings: Yield Analysis
+## Results: Yield Analysis
 
-### 1. Rainfall-Yield Correlation Varies by Province
+### 1. Rainfall-Yield Correlation by Province
 
+Total seasonal rainfall shows a weak relationship with yield
 **Overall correlation**: 0.137 (rainfall explains 1.9% of yield variation nationally)
 
 | Correlation Type | Provinces | Interpretation |
@@ -114,18 +115,20 @@ This study evaluates how rainfall variability influences maize yield across ten 
 
 ### 2. Rainfall Efficiency by Province
 
-| Province | Efficiency (t/ha per 100mm) | vs. National Avg | Ranking |
+Rainfall and yield relationships differ across provinces
+
+| Province | Efficiency (t/ha per 100mm) | vs. National Avg | Result |
 |----------|----------------------------|------------------|---------|
-| Lusaka | 0.289 | +55% | 1 |
-| Northern | 0.263 | +41% | 2 |
-| Muchinga | 0.231 | +24% | 3 |
-| Central | 0.212 | +14% | 4 |
-| Copperbelt | 0.204 | +10% | 5 |
-| Luapula | 0.170 | -9% | 6 |
-| Eastern | 0.169 | -9% | 7 |
-| North-Western | 0.168 | -10% | 8 |
-| Southern | 0.138 | -26% | 9 |
-| Western | 0.093 | -50% | 10 |
+| Lusaka | 0.289 | +55% | Yield increases with rainfall |
+| Northern | 0.263 | +41% | Yield decreases with higher rainfall  |
+| Muchinga | 0.231 | +24% | No clear relationship |
+| Central | 0.212 | +14% | Yield increases with rainfall  |
+| Copperbelt | 0.204 | +10% | Yield increases with rainfall  |
+| Luapula | 0.170 | -9% | Yield decreases with higher rainfall  |
+| Eastern | 0.169 | -9% | Yield decreases with higher rainfall |
+| North-Western | 0.168 | -10% | Yield decreases with higher rainfall  |
+| Southern | 0.138 | -26% | Yield decreases with higher rainfall  |
+| Western | 0.093 | -50% | Yield decreases with higher rainfall  |
 
 **National average:** 0.187 t/ha per 100mm rain
 
@@ -135,6 +138,8 @@ This study evaluates how rainfall variability influences maize yield across ten 
 - Western's low efficiency suggests soil constraints or management issues
 
 ### 3. Optimal Rainfall Range
+
+Yield per unit rainfall varies substantially across provinces
 
 | Rainfall Range | Observations | Mean Yield (t/ha) | vs. National Avg |
 |----------------|--------------|-------------------|------------------|
@@ -150,7 +155,9 @@ This study evaluates how rainfall variability influences maize yield across ten 
 - No evidence of diminishing returns within observed range
 - Below 800 mm: yields drop 16-19% below average
 
-### 4. Vulnerability to Low Rainfall (≤ 800 mm)
+### 4. Rainfall Threshold Effects (≤ 800 mm)
+
+Low rainfall is associated with reduced yields
 
 | Province | Low-Rainfall Years | % of Records | Vulnerability Ranking |
 |----------|-------------------|--------------|----------------------|
@@ -165,7 +172,7 @@ This study evaluates how rainfall variability influences maize yield across ten 
 | Copperbelt | 0 | 0% | Least vulnerable |
 | Luapula | 0 | 0% | Least vulnerable |
 
-### 5. Yield in Low vs Normal Rainfall Years
+### 5. Rainfall Years
 
 | Category | Threshold | Observations | Mean Yield | Difference |
 |----------|-----------|--------------|------------|------------|
