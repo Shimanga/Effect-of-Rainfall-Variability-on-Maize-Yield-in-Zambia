@@ -55,7 +55,7 @@ SELECT dbo.[rainfall_from_oct_to_march].[PCODE],
 dbo.[rainfall_from_oct_to_march].[season_year],
 dbo.[rainfall_from_oct_to_march].[province],
 dbo.[rainfall].[adm_level],
-SUM ([rainfall_from_oct_to_march].[rfh]) AS rfh_total
+AVG ([rainfall_from_oct_to_march].[rfh]) AS avg_rfh
 INTO dbo.[rainfall_admlevel1_summary]
 FROM dbo.[rainfall_from_oct_to_march]
 JOIN dbo.[rainfall]
