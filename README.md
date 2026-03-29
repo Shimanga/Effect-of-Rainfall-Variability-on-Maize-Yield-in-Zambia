@@ -148,6 +148,8 @@ Rainfall and yield relationships differ across provinces
 | Southern | 0.138 | -26% | Yield decreases with higher rainfall  |
 | Western | 0.093 | -50% | Yield decreases with higher rainfall  |
 
+![Efficiency](Output/Rainfall efficiency by province.png)
+
 **National average:** 0.187 t/ha per 100mm rain
 
 **Key Insights:**
@@ -267,6 +269,8 @@ October is not the wettest month for any province. Its reliability as the planti
 
 This forces farmers to delay planting, compressing the growing season and increasing the risk of mid-season dry spells affecting critical growth stages.
 
+![October Rainfall](Output/October_rainfall_trend_analysis.png) 
+
 ### 9. Monthly Contribution to Seasonal Total
 
 The percentage each month contributes to the total growing season rainfall (October-March) varies significantly by province. These figures are calculated from 45 years of monthly rainfall data (1981-2026).
@@ -344,6 +348,8 @@ The percentage each month contributes to the total growing season rainfall (Octo
 - **Southern, Lusaka, Central**: Significant declines (-8% to -11%)
 - **Other provinces**: No statistically significant change
 - **October rainfall**: Declining reliability across all provinces, especially in the south
+
+![Trend](Output/National_average_rain_yield.png)
 
 ---
 
