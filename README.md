@@ -41,8 +41,13 @@ This study evaluates how rainfall variability influences maize yield across ten 
 | Zero yield records removed | Treated as missing data |
 | Seasonal yield data aggregation | Cannot directly correlate monthly rainfall with yield |
 
----
+## Data Validation and Revision
 
+- Initial dataset contained inconsistencies from query extraction
+- Dataset was rebuilt and revalidated
+- All results in this analysis are based on the corrected dataset
+
+---
 
 ## Dataset Structure
 
@@ -64,6 +69,20 @@ This study evaluates how rainfall variability influences maize yield across ten 
 | Year | 1981-2026 |
 | Month | 10-12/1-3 (1=January, 10=October, etc.) |
 | rfq | Monthly rainfall (mm) |
+
+### Analytical Framework
+
+The analysis evaluates the relationship between rainfall and yield using three components:
+**Independent Variable:** Rainfall (seasonal totals and monthly distribution)
+**Dependent Variable:** Maize yield (tonnes per hectare)
+**Secondary Factors:** Provincial variation and rainfall timing patterns
+
+### Methodology
+
+**Correlation Analysis:** To measure the strength of the relationship between seasonal rainfall and yield
+**Regression Modeling:** To estimate the explanatory power of rainfall on yield variation
+**Monthly Pattern Analysis:** To assess intra-seasonal rainfall distribution across provinces
+**Comparative Metrics:** Yield per unit rainfall (efficiency measures)
 
 ---
 
@@ -370,7 +389,7 @@ Total seasonal rainfall explains only 1.9% of yield variation nationally. This i
 
 5. **October reliability decline**: Farmers need guidance on shifting planting windows
 
-6. **Muchinga caution**: Only 3 years of yield data (2011-2013). Continue monitoring as more years become available.
+6. **Muchinga caution**: Only 3 years of yield data (2011-2013). Continue monitoring as more data become available.
 
 ---
 
@@ -389,4 +408,4 @@ REPORT/
   README.md  
 
 ### Summary
-This study finds that total seasonal rainfall is a weak predictor of maize yield in Zambia, while monthly rainfall distribution provides more meaningful explanatory insight. The findings support a shift toward more granular climate analysis in agricultural research.
+This study finds that total seasonal rainfall is a weak predictor of maize yield in Zambia, while monthly rainfall distribution provides more explanatory value, indicating that yield response is sensitive to timing rather than volume. The findings support a shift toward more granular climate analysis in agricultural research.
