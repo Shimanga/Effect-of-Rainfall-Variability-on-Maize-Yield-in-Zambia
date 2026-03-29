@@ -118,9 +118,8 @@ The analysis evaluates the relationship between rainfall and yield using three c
 
 ### 1. Rainfall-Yield Correlation by Province
 
-Total seasonal rainfall shows a weak relationship with yield
-**Overall correlation**: 0.137 (rainfall explains 1.9% of yield variation nationally)
-
+Total seasonal rainfall shows a weak relationship with yield. It explains only ~1.9 % of yield variation (R² = 0.014). 
+![Correlation](Output/Rainfall_vs_yield.png)
 | Correlation Type | Provinces | Interpretation |
 |------------------|-----------|----------------|
 | **Positive** (0.15-0.45) | Central, Copperbelt, Eastern, Lusaka, Western | More rain generally increases yield |
