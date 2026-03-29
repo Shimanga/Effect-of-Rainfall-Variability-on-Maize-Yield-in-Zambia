@@ -41,7 +41,7 @@ This study evaluates how rainfall variability influences maize yield across ten 
 | Zero yield records removed | Treated as missing data |
 | Seasonal yield data aggregation | Cannot directly correlate monthly rainfall with yield |
 
-## Data Validation and Revision
+### Data Validation and Revision
 
 - Initial dataset contained inconsistencies from query extraction
 - Dataset was rebuilt and revalidated
@@ -73,9 +73,9 @@ This study evaluates how rainfall variability influences maize yield across ten 
 ### Analytical Framework
 
 The analysis evaluates the relationship between rainfall and yield using three components:
-**Independent Variable:** Rainfall (seasonal totals and monthly distribution)
-**Dependent Variable:** Maize yield (tonnes per hectare)
-**Secondary Factors:** Provincial variation and rainfall timing patterns
+-**Independent Variable:** Rainfall (seasonal totals and monthly distribution)
+-**Dependent Variable:** Maize yield (tonnes per hectare)
+-**Secondary Factors:** Provincial variation and rainfall timing patterns
 
 ### Methodology
 
@@ -391,21 +391,12 @@ Total seasonal rainfall explains only 1.9% of yield variation nationally. This i
 
 6. **Muchinga caution**: Only 3 years of yield data (2011-2013). Continue monitoring as more data become available.
 
+### Next Research Steps
+
+- Explore crop simulation models to link rainfall timing with physiological responses.
+- Integrate temperature and soil moisture variables for multivariate climatic analysis.
+- Compare findings with smallholder systems literature, where rainfall patterns have been linked to yield variability.
 ---
-
-## Repository Structure
-
-DATA/
-  maize_yield_data.csv
-  rainfall_monthly_data.csv
-
-PYTHON/
-  data_cleaning.py
-  rainfall_yield_analysis.py
-  pattern_analysis.py
-
-REPORT/
-  README.md  
 
 ### Summary
 This study finds that total seasonal rainfall is a weak predictor of maize yield in Zambia, while monthly rainfall distribution provides more explanatory value, indicating that yield response is sensitive to timing rather than volume. The findings support a shift toward more granular climate analysis in agricultural research.
