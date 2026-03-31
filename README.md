@@ -51,7 +51,7 @@ This study evaluates how rainfall variability influences maize yield across ten 
 
 ## Dataset Structure
 
-### Yield Dataset
+### Seasonal Yield and Rainfall Dataset
 
 | Column | Description |
 |--------|-------------|
