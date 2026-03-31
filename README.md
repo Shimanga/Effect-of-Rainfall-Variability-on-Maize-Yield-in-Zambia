@@ -1,5 +1,7 @@
 # Rainfall Variability and Its Effect on Maize Yield in Zambia (1986-2013)
 
+Portfolio project: Hypothesis-driven investigation into climate-agriculture relationships. Demonstrates: correlation/regression analysis, monthly pattern detection, efficiency metrics, and translation of null results into policy research agendas.
+
 This study evaluates how rainfall variability influences maize yield across ten provinces of Zambia. The analysis tests whether total seasonal rainfall explains yield variation, or whether provincial differences and rainfall patterns provide stronger explanatory value.
 
 ## Table of Contents
@@ -118,8 +120,10 @@ The analysis evaluates the relationship between rainfall and yield using three c
 
 ### 1. Rainfall-Yield Correlation by Province
 
-Total seasonal rainfall shows a weak relationship with yield. It explains only ~1.9 % of yield variation (R² = 0.014). 
+Total seasonal rainfall shows a weak relationship with yield. It explains only ~1.9 % of yield variation (R² = 0.014). 
 ![Correlation](Output/Rainfall_vs_yield.png)
+*Figure 1: Seasonal rainfall vs. maize yield, all provinces pooled. R² = 0.019.*
+
 | Correlation Type | Provinces | Interpretation |
 |------------------|-----------|----------------|
 | **Positive** (0.15-0.45) | Central, Copperbelt, Eastern, Lusaka, Western | More rain generally increases yield |
@@ -149,11 +153,12 @@ Rainfall and yield relationships differ across provinces
 | Western | 0.093 | -50% | Yield decreases with higher rainfall  |
 
 ![Efficiency](Output/Rainfall efficiency by province.png)
+*Figure 2: Yield per 100mm rainfall by province. National average shown as dashed line.*
 
 **National average:** 0.187 t/ha per 100mm rain
 
 **Key Insights:**
-- Lusaka is 3× more efficient than Western province
+- Lusaka is 3x more efficient than Western province
 - Northern shows strong efficiency despite moderate rainfall
 - Western's low efficiency suggests soil constraints or management issues
 
@@ -269,7 +274,8 @@ October is not the wettest month for any province. Its reliability as the planti
 
 This forces farmers to delay planting, compressing the growing season and increasing the risk of mid-season dry spells affecting critical growth stages.
 
-![October Rainfall](Output/October_rainfall_trend_analysis.png) 
+![October Rainfall](Output/October_rainfall_trend_analysis.png)
+*Figure 3: October rainfall trends over time. Decline in low-rainfall frequency is visible in southern provinces.* 
 
 ### 9. Monthly Contribution to Seasonal Total
 
@@ -292,6 +298,7 @@ The percentage each month contributes to the total growing season rainfall (Octo
 - **Luapula, Northern**: December-January contribute 37% of seasonal total - concentrated peak
 - **North-Western, Copperbelt, Central, Western**: More evenly distributed across the growing season
 - October contributes only 15-17% of seasonal total across all provinces - planting month reliability is critical
+
 ---
 
 ## Regression Analysis
@@ -350,6 +357,7 @@ The percentage each month contributes to the total growing season rainfall (Octo
 - **October rainfall**: Declining reliability across all provinces, especially in the south
 
 ![Trend](Output/National_average_rain_yield.png)
+*Figure 4: National average rainfall (left axis) and maize yield (right axis), 1986-2013.*
 
 ---
 
@@ -359,9 +367,11 @@ The percentage each month contributes to the total growing season rainfall (Octo
 Total seasonal rainfall explains only 1.9% of yield variation nationally. This indicates that:
 
 1. **Rainfall timing matters more than total amount** - Monthly analysis confirms distinct provincial rainfall signatures that affect how seasonal totals translate to yield
-2. **Soil quality varies significantly** - Explains efficiency gap (Lusaka 3× Western)
+2. **Soil quality varies significantly** - Explains efficiency gap (Lusaka 3x Western)
 3. **Management practices differ** - Input use, variety selection, planting dates vary by province
 4. **Topography and drainage** - High-rainfall provinces may experience waterlogging
+
+Methodological takeaway for future research: Null results of this magnitude (R² = 0.019) are as informative as positive findings – they redirect inquiry toward timing, soils, and management.
 
 ### What the Data Shows
 
@@ -401,6 +411,8 @@ Total seasonal rainfall explains only 1.9% of yield variation nationally. This i
 - Explore crop simulation models to link rainfall timing with physiological responses.
 - Integrate temperature and soil moisture variables for multivariate climatic analysis.
 - Compare findings with smallholder systems literature, where rainfall patterns have been linked to yield variability.
+- Portfolio extension: Apply the same monthly-pattern framework to other Southern African countries with heterogenous rainfall regimes.
+
 ---
 
 ### Summary
