@@ -214,7 +214,7 @@ Yield increases across observed rainfall levels
 
 ### 6. Provincial Rainfall Distribution Patterns
 
-Analysis of 45 years of monthly rainfall data (1981–2026) reveals that provinces have unique rainfall distributions during the growing season (October–March). This explains why a single seasonal total can have different effects in different regions.
+Analysis of 45 years of monthly rainfall data (1981–2026) reveals that provinces have unique rainfall distributions during the growing season (October-March). This explains why a single seasonal total can have different effects in different regions.
 
 **Average Monthly Rainfall by Province (mm)**
 
