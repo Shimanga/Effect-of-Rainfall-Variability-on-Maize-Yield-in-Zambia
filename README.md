@@ -152,7 +152,7 @@ Rainfall and yield relationships differ across provinces
 | Southern | 0.138 | -26% | Yield decreases with higher rainfall  |
 | Western | 0.093 | -50% | Yield decreases with higher rainfall  |
 
-![Efficiency](Output/Rainfall efficiency by province.png)
+![Efficiency](Rainfall_efficiency_by_province.png)
 *Figure 2: Yield per 100mm rainfall by province. National average shown as dashed line.*
 
 **National average:** 0.187 t/ha per 100mm rain
