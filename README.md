@@ -75,16 +75,16 @@ This study evaluates how rainfall variability influences maize yield across ten 
 ### Analytical Framework
 
 The analysis evaluates the relationship between rainfall and yield using three components:
--**Independent Variable:** Rainfall (seasonal totals and monthly distribution)
--**Dependent Variable:** Maize yield (tonnes per hectare)
--**Secondary Factors:** Provincial variation and rainfall timing patterns
+- **Independent Variable:** Rainfall (seasonal totals and monthly distribution)
+- **Dependent Variable:** Maize yield (tonnes per hectare)
+- **Secondary Factors:** Provincial variation and rainfall timing patterns
 
 ### Methodology
 
-**Correlation Analysis:** To measure the strength of the relationship between seasonal rainfall and yield
-**Regression Modeling:** To estimate the explanatory power of rainfall on yield variation
-**Monthly Pattern Analysis:** To assess intra-seasonal rainfall distribution across provinces
-**Comparative Metrics:** Yield per unit rainfall (efficiency measures)
+- **Correlation Analysis:** To measure the strength of the relationship between seasonal rainfall and yield
+- **Regression Modeling:** To estimate the explanatory power of rainfall on yield variation
+- **Monthly Pattern Analysis:** To assess intra-seasonal rainfall distribution across provinces
+- **Comparative Metrics:** Yield per unit rainfall (efficiency measures)
 
 ---
 
