@@ -417,3 +417,6 @@ Methodological takeaway for future research: Null results of this magnitude (R²
 
 ### Summary
 This study finds that total seasonal rainfall is a weak predictor of maize yield in Zambia, while monthly rainfall distribution provides more explanatory value, indicating that yield response is sensitive to timing rather than volume. The findings support a shift toward more granular climate analysis in agricultural research.
+
+Data Sources: [Rainfall](https://data.humdata.org/organization/3ecac442-7fed-448d-8f78-b385ef6f84e7)
+              [Yield](http://zamstats.gov.zm/)   
