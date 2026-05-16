@@ -427,34 +427,57 @@ Methodological takeaway for future research: Null results of this magnitude (R²
 
 | Finding | Implication |
 |---------|-------------|
-| Optimal range 1,200-1,600 mm | Highest yields in this band |
-| Lusaka most drought-vulnerable | 74% of years below 800 mm |
-| Luapula negative rainfall correlation | Excess moisture reduces yields |
-| Western least efficient | 0.093 t/ha per 100mm vs national 0.187 |
-| Rainfall signatures | Four distinct provincial patterns |
-| Declining trends | Southern, Lusaka, Central lost 8-11% of rainfall since 2000 |
-| October reliability | Declining across all provinces, especially in the south |
+| Optimal rainfall range: 1,200-1,600 mm | Highest yields in this band |
+| Lusaka most drought-vulnerable | 74% of years below 800 mm, yet yields 1.91 t/ha |
+| Luapula negative rainfall correlation (-0.476) | Excess moisture reduces yields (waterlogging risk) |
+| Western least efficient (0.093 t/ha per 100mm) | 50% below national average; suggests soil constraints |
+| Lusaka most efficient (0.289 t/ha per 100mm) | 3x more efficient than Western |
+| Rainfall signatures | Four distinct provincial patterns: mid-season peak, mid-season plateau, extended season, evenly distributed |
+| October rainfall declining significantly | Copperbelt (-33%), Northern (-37%), Lusaka (-31%), Southern (-26%) |
+| October most unpredictable | Eastern (CV 111.6%), Northern (109.9%), Lusaka (103.5%), North-Western (103.5%) |
+| October contributes only 2-6% of seasonal rain | Planting month is the driest of the growing season |
+| January provides 30-31% of seasonal rain | Mid-season moisture is reliable; peak growing period well-supported |
+| National rainfall-yield correlation | 0.137 (rainfall explains only 1.9% of yield variation) |
 
 ### Policy Implications
 
-1. **Drought mitigation** priority: Lusaka, Southern, Eastern
+**1. Drought mitigation priority**
+Lusaka, Southern, and Eastern require the most attention for drought preparedness. Lusaka experiences low rainfall in 74% of years yet achieves high yields - suggesting existing coping mechanisms could be shared with other provinces.
 
-2. **Waterlogging management**: Luapula, Northern need drainage infrastructure
+**2. Waterlogging management**
+Luapula and Northern need drainage infrastructure and raised bed systems. Their negative rainfall-yield correlation (-0.476 and -0.298 respectively) indicates excess moisture is a greater constraint than drought.
 
-3. **Efficiency gap**: Knowledge transfer from high-efficiency (Lusaka, Northern) to low-efficiency (Western, Southern) provinces
+**3. October planting window**
+October rainfall has declined significantly in four provinces:
+- Copperbelt: -33% (p=0.037)
+- Northern: -37% (p=0.015)
+- Lusaka: -31% (p=0.036)
+- Southern: -26% (p=0.010)
 
-4. **Tailor Recommendations by Rainfall Pattern**:
+Farmers in these provinces need guidance on shifting planting windows, using drought-tolerant varieties, or considering supplemental irrigation.
 
-   | Province Group | Recommended Strategies |
-   |----------------|------------------------|
-   | **Eastern, Lusaka** (Extended season) | Select varieties that mature before heavy late rains; ensure good drainage for harvest |
-   | **Southern** (Evenly distributed) | Water harvesting; drought-tolerant varieties; consistent soil moisture management |
-   | **Luapula, Northern** (Mid-season peak) | Improve drainage; raised beds; varieties tolerant of excess moisture |
-   | **Western, Central, Copperbelt, North-Western** (Mid-season plateau) | Flexible planting dates; maintain soil cover to retain moisture |
+**4. October unpredictability**
+Eastern (CV 111.6%), Northern (109.9%), Lusaka (103.5%), and North-Western (103.5%) have highly unpredictable October rainfall. Planting decisions based on October rain alone are high-risk in these provinces.
 
-5. **October reliability decline**: Farmers need guidance on shifting planting windows
+**5. Efficiency gap**
+Lusaka (0.289) is 3x more efficient than Western (0.093). Knowledge transfer from high-efficiency to low-efficiency provinces should focus on soil management and farming practices, not rainfall-dependent strategies.
 
-6. **Muchinga caution**: Only 3 years of yield data (2011-2013). Continue monitoring as more data become available.
+**6. Tailor recommendations by rainfall pattern**
+
+| Province Group | Pattern | Recommended Strategies |
+|----------------|---------|------------------------|
+| Lusaka, Eastern | Extended season (March 21-24% of rain) | Select varieties that mature before heavy late rains; ensure good drainage for harvest; use late-season moisture for grain filling |
+| Southern | Evenly distributed | Water harvesting; drought-tolerant varieties; consistent soil moisture management; vulnerable to any dry spell |
+| Luapula, Northern | Mid-season peak (Dec-Jan 37% of rain) | Improve drainage; raised beds; varieties tolerant of excess moisture; waterlogging is primary risk |
+| Copperbelt, Central, Western, North-Western, Muchinga | Mid-season plateau | Flexible planting dates; maintain soil cover to retain moisture; balanced water management |
+
+**7. Muchinga caution**
+Only 3 years of yield data (2011-2013). Continue monitoring as more data become available. Monthly rainfall data suggests patterns similar to neighboring provinces.
+
+**8. Research priorities**
+- Integrate soil data (especially for Western province's sandy soils)
+- Incorporate temperature and evapotranspiration variables
+- Apply monthly pattern framework to other Southern African countries.
 
 ### Next Research Steps
 
