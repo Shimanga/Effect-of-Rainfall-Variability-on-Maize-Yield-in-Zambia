@@ -247,100 +247,119 @@ Analysis of 44 complete seasons of rainfall data (1981-2024) shows significant v
 - **Lusaka shows the widest range** (360-1017 mm) - highest variability
 - **Luapula shows the smallest range** (850-1343 mm) - most consistent
 
-### 8. October Rainfall Trends and Variability
+### 7. October Rainfall Trends and Variability
 
-October is the traditional planting month across Zambia. Analysis of 45 years of data reveals significant declines and high variability in many provinces.
+October is the traditional planting month across Zambia. Analysis of 44 years of data (1981-2024) reveals significant variation and declining trends in many provinces.
 
-#### October Rainfall by Province (1981-2026)
+#### October Rainfall by Province (1981-2024)
 
-| Province | Mean October Rain (mm) | CV (%) | Predictability |
-|----------|----------------------|--------|----------------|
-| Copperbelt | 16.1 | 65.1 | Moderate |
-| Luapula | 11.8 | 62.9 | Moderate |
-| Southern | 9.4 | 68.7 | Moderate |
-| Muchinga | 8.9 | 65.6 | Moderate |
-| Central | 8.6 | 93.7 | Unpredictable |
-| Lusaka | 5.6 | 103.5 | Highly unpredictable |
-| Western | 5.5 | 90.9 | Unpredictable |
-| Northern | 4.1 | 109.9 | Extremely unpredictable |
-| North-Western | 3.9 | 103.5 | Highly unpredictable |
-| Eastern | 3.7 | 111.6 | Extremely unpredictable |
+| Province | Mean Oct Rain (mm) | CV (%) | % Low Octobers | % High Octobers | Predictability |
+|----------|-------------------|--------|----------------|-----------------|----------------|
+| Copperbelt | 48.8 | 44.4 | 0.0 | 81.8 | Moderate |
+| Luapula | 35.8 | 41.6 | 2.3 | 65.9 | Moderate |
+| Southern | 28.6 | 41.5 | 2.3 | 43.2 | Moderate |
+| Muchinga | 26.9 | 49.5 | 4.5 | 34.1 | Moderate |
+| Central | 26.2 | 67.9 | 20.5 | 34.1 | Unpredictable |
+| Lusaka | 17.1 | 74.0 | 36.4 | 11.4 | Highly unpredictable |
+| Western | 16.7 | 66.3 | 38.6 | 11.4 | Unpredictable |
+| Northern | 12.6 | 76.6 | 65.9 | 6.8 | Extremely unpredictable |
+| North-Western | 11.7 | 59.0 | 59.1 | 4.5 | Unpredictable |
+| Eastern | 11.3 | 74.8 | 70.5 | 6.8 | Extremely unpredictable |
 
-#### October Rainfall Decline (1981-2000 vs 2001-2026)
-
-| Province | 1981-2000 (mm) | 2001-2026 (mm) | Change | Significance |
-|----------|----------------|----------------|--------|--------------|
-| Copperbelt | 22.1 | 14.8 | -33% | Significant (p=0.037) |
-| Northern | 5.2 | 3.3 | -37% | Significant (p=0.015) |
-| Lusaka | 6.8 | 4.7 | -31% | Significant (p=0.036) |
-| Southern | 11.1 | 8.2 | -26% | Significant (p=0.010) |
-| Luapula | 13.1 | 10.7 | -18% | Not significant |
-| Central | 11.2 | 8.2 | -27% | Not significant |
-| Eastern | 4.5 | 3.6 | -20% | Not significant |
-| North-Western | 4.9 | 3.7 | -24% | Not significant |
-| Western | 7.8 | 5.1 | -35% | Not significant |
-
-**Key Findings:**
-
-- **Copperbelt lost the most October rain** - from 22.1 mm to 14.8 mm (-33%)
-- **Northern lost the highest percentage** - from 5.2 mm to 3.3 mm (-37%)
-- **Eastern has the most unpredictable October** (CV 111.6%) - farmers cannot rely on planting timing
-- **Lusaka lost 31% of October rain** and already receives very little (5.6 mm average)
-
-#### October Rainfall By Decade
+#### October Rainfall by Decade (mm)
 
 | Province | 1980s | 1990s | 2000s | 2010s | 2020s |
 |----------|-------|-------|-------|-------|-------|
-| Copperbelt | 22.1 | 13.6 | 13.9 | 14.9 | 15.7 |
-| Lusaka | 8.3 | 5.3 | 5.5 | 4.2 | 4.3 |
-| Southern | 11.7 | 10.4 | 7.1 | 9.1 | 8.5 |
-| Northern | 5.6 | 4.8 | 3.1 | 2.7 | 4.7 |
-| Eastern | 4.5 | 3.9 | 2.5 | 2.9 | 6.0 |
+| Copperbelt | 66.1 | 40.9 | 41.6 | 44.8 | 53.0 |
+| Luapula | 43.4 | 35.4 | 27.4 | 35.0 | 40.4 |
+| Southern | 35.1 | 31.2 | 21.2 | 27.4 | 27.5 |
+| Central | 33.5 | 23.6 | 23.5 | 20.8 | 34.5 |
+| Lusaka | 25.0 | 15.9 | 16.5 | 12.4 | 13.4 |
+| Western | 23.5 | 15.6 | 13.7 | 12.7 | 19.9 |
+| Northern | 16.7 | 14.4 | 9.4 | 8.2 | 16.4 |
+| North-Western | 14.6 | 11.6 | 7.9 | 11.0 | 16.0 |
+| Eastern | 13.5 | 11.8 | 7.4 | 8.7 | 20.8 |
 
-**Conclusion:** October rainfall has declined significantly in multiple provinces, with the most severe declines in Copperbelt, Northern, Lusaka, and Southern. Farmers across Zambia face increasing uncertainty in the traditional planting window.
+#### October Rainfall Change (1981-2000 vs 2001-2024)
 
-![October Rainfall](Output/October_rainfall_trend_analysis.png)
-*Figure 3: October rainfall trends over time. Significant declines visible in Copperbelt, Northern, Lusaka, and Southern.*
+| Province | 1981-2000 (mm) | 2001-2024 (mm) | Change | Significance |
+|----------|----------------|----------------|--------|--------------|
+| Lusaka | 20.5 | 14.3 | -6.2 (-30%) | Not significant (p=0.107) |
+| **Southern** | 33.2 | 24.8 | **-8.4 (-25%)** | **Significant (p=0.018)** |
+| Luapula | 39.4 | 32.7 | -6.7 (-17%) | Not significant (p=0.141) |
+| Northern | 15.6 | 10.1 | -5.5 (-35%) | Not significant (p=0.059) |
 
-### 9. Monthly Contribution to Seasonal Total
+#### Linear Trend Analysis (mm/year)
 
-The percentage each month contributes to the total growing season rainfall (October-March) varies by province. These figures are calculated from 45 years of monthly rainfall data (1981-2026) using the `rfh` dataset.
+| Province | Trend (mm/year) | R² | P-value | Significant |
+|----------|-----------------|-----|---------|-------------|
+| **Lusaka** | -0.35 | 0.123 | **0.020** | **Yes** |
+| **Southern** | -0.28 | 0.093 | **0.044** | **Yes** |
+| **Muchinga** | -0.46 | 0.195 | **0.003** | **Yes** |
+| Copperbelt | -0.47 | 0.079 | 0.064 | No |
+| Western | -0.25 | 0.084 | 0.056 | No |
+| Central | -0.26 | 0.036 | 0.220 | No |
+| Northern | -0.19 | 0.065 | 0.094 | No |
+| Luapula | -0.22 | 0.035 | 0.223 | No |
+| North-Western | -0.06 | 0.013 | 0.453 | No |
+| Eastern | -0.02 | 0.001 | 0.823 | No |
+
+**Key Findings:**
+
+- **Southern shows significant decline** in both period comparison (-25%, p=0.018) and linear trend (-0.28 mm/year, p=0.044)
+- **Lusaka shows significant linear trend** (-0.35 mm/year, p=0.020)
+- **Muchinga shows strongest significant decline** (-0.46 mm/year, p=0.003)
+- **Copperbelt has highest October rainfall** (48.8 mm) and lowest variability (CV 44.4%)
+- **Eastern and Northern have most unpredictable October** (CV >74%) and highest frequency of low Octobers (>65%)
+- **National October rainfall declined** from 26.7 mm (1981-2000) to 20.9 mm (2001-2024) - a 22% reduction
+
+**Conclusion:** October rainfall has declined significantly in Lusaka, Southern, and Muchinga. Eastern, Northern, and North-Western provinces face highly unpredictable Octobers with low rainfall (<12 mm on average), making traditional planting windows increasingly risky.
+
+### 8. Monthly Contribution to Seasonal Total
+
+The percentage each month contributes to the total growing season rainfall (October-March) varies by province. These figures are calculated from 44 years of monthly rainfall data (1981-2024).
+
+**Mean Monthly Rainfall by Province (mm)**
+
+| Province | Oct | Nov | Dec | Jan | Feb | Mar | Total |
+|----------|-----|-----|-----|-----|-----|-----|-------|
+| Luapula | 35.8 | 100.7 | 208.7 | 241.8 | 201.3 | 154.9 | 943 |
+| Central | 26.2 | 100.7 | 208.7 | 241.8 | 201.3 | 154.9 | 934 |
+| Southern | 28.6 | 100.7 | 208.7 | 241.8 | 201.3 | 154.9 | 936 |
+| Copperbelt | 48.8 | 100.7 | 208.7 | 241.8 | 201.3 | 154.9 | 956 |
+| North-Western | 11.7 | 100.7 | 208.7 | 241.8 | 201.3 | 154.9 | 919 |
+| Eastern | 11.3 | 100.7 | 208.7 | 241.8 | 201.3 | 154.9 | 919 |
+| Western | 16.7 | 100.7 | 208.7 | 241.8 | 201.3 | 154.9 | 924 |
+| Muchinga | 26.9 | 100.7 | 208.7 | 241.8 | 201.3 | 154.9 | 934 |
+| Northern | 12.6 | 100.7 | 208.7 | 241.8 | 201.3 | 154.9 | 920 |
+| Lusaka | 17.1 | 100.7 | 208.7 | 241.8 | 201.3 | 154.9 | 925 |
+
+*Note: Nov-Feb values are national averages (100.7, 208.7, 241.8, 201.3 respectively). Province-specific monthly values for Nov-Feb not available in current dataset.*
 
 **Monthly Contribution to Growing Season Rainfall (%)**
 
 | Province | Oct | Nov | Dec | Jan | Feb | Mar |
 |----------|-----|-----|-----|-----|-----|-----|
-| Copperbelt | 6% | 13% | 26% | 30% | 16% | 9% |
-| Luapula | 5% | 13% | 27% | 31% | 16% | 8% |
-| Southern | 4% | 13% | 27% | 31% | 16% | 9% |
-| Central | 4% | 13% | 27% | 31% | 16% | 9% |
-| Muchinga | 4% | 13% | 27% | 31% | 16% | 9% |
-| Lusaka | 3% | 13% | 27% | 31% | 16% | 10% |
-| Western | 3% | 13% | 27% | 31% | 16% | 10% |
-| Northern | 2% | 13% | 27% | 31% | 16% | 11% |
-| North-Western | 2% | 13% | 27% | 31% | 16% | 11% |
-| Eastern | 2% | 13% | 27% | 31% | 16% | 11% |
-
-*Note: Percentages are calculated from province-specific October means and national averages for Nov-Feb. Values may not sum to 100% due to rounding.*
+| Copperbelt | 5% | 11% | 22% | 25% | 21% | 16% |
+| Luapula | 4% | 11% | 22% | 26% | 21% | 16% |
+| Southern | 3% | 11% | 22% | 26% | 21% | 17% |
+| Central | 3% | 11% | 22% | 26% | 22% | 17% |
+| Muchinga | 3% | 11% | 22% | 26% | 22% | 17% |
+| Lusaka | 2% | 11% | 23% | 26% | 22% | 17% |
+| Western | 2% | 11% | 23% | 26% | 22% | 17% |
+| Northern | 1% | 11% | 23% | 26% | 22% | 17% |
+| North-Western | 1% | 11% | 23% | 26% | 22% | 17% |
+| Eastern | 1% | 11% | 23% | 26% | 22% | 17% |
 
 **Key Insights:**
 
-- **January is the dominant rainfall month** across all provinces, contributing 30-31% of growing season rainfall
-- **December is the second most important month** at 26-27% of seasonal total
-- **October contributes only 2-6%** of growing season rainfall, yet it is the traditional planting month
-- **March contribution varies** - Copperbelt (9%) vs Eastern/Northern/North-Western (11%) - provinces with higher March rainfall have extended wet seasons
-- **Northern and Eastern provinces** show slightly higher March contributions (11%), indicating a later end to the rainy season
+- **January is the dominant rainfall month** across all provinces (25-26% of seasonal total)
+- **December is the second most important month** (22-23%)
+- **October contributes only 1-5%** of growing season rainfall, yet it is the traditional planting month
+- **March contributes 16-17%** - provinces with higher March rainfall have extended wet seasons
+- **December-January combined contribute ~48%** of all growing season rain
 
-**Agricultural Implications:**
-
-| Finding | Implication |
-|---------|-------------|
-| October is 2-6% of seasonal rain | Planting decisions based on October rainfall alone are high-risk |
-| January provides 30-31% of rain | Mid-season moisture is reliable; peak growing period is well-supported |
-| March varies 9-11% | Provinces with higher March rain (Northern, Eastern) can support longer-maturing varieties |
-| December-January combined = ~57% | Half of all growing season rain falls in these two months - waterlogging risk in high-rainfall provinces |
-
-**Conclusion:** The majority of growing season rainfall occurs in December and January. October's small contribution (2-6%) explains why low October rainfall does not necessarily predict poor yields - provided the peak months deliver adequate moisture.
+**Conclusion:** The majority of growing season rainfall occurs in December and January. October's small contribution (1-5%) explains why low October rainfall does not necessarily predict poor yields - provided the peak months deliver adequate moisture.
 
 ---
 
@@ -427,16 +446,17 @@ Methodological takeaway for future research: Null results of this magnitude (R²
 
 | Finding | Implication |
 |---------|-------------|
-| Optimal rainfall range: 1,200-1,600 mm | Highest yields in this band |
-| Lusaka most drought-vulnerable | 74% of years below 800 mm, yet yields 1.91 t/ha |
-| Luapula negative rainfall correlation (-0.476) | Excess moisture reduces yields (waterlogging risk) |
-| Western least efficient (0.093 t/ha per 100mm) | 50% below national average; suggests soil constraints |
+| Seasonal rainfall range: 666 mm (Lusaka) to 1,124 mm (Luapula) | 1.7x variation across provinces |
+| National mean seasonal rainfall: 931 mm | Below 1,000 mm threshold |
+| Lusaka most drought-vulnerable | 666 mm avg, widest range (360-1017 mm) |
+| Luapula most consistent | Smallest range (850-1343 mm), lowest CV |
+| Luapula negative rainfall-yield correlation (-0.476) | Excess moisture reduces yields (waterlogging) |
+| Western least efficient (0.093 t/ha per 100mm) | 50% below national average; soil constraints |
 | Lusaka most efficient (0.289 t/ha per 100mm) | 3x more efficient than Western |
-| Rainfall signatures | Four distinct provincial patterns: mid-season peak, mid-season plateau, extended season, evenly distributed |
-| October rainfall declining significantly | Copperbelt (-33%), Northern (-37%), Lusaka (-31%), Southern (-26%) |
-| October most unpredictable | Eastern (CV 111.6%), Northern (109.9%), Lusaka (103.5%), North-Western (103.5%) |
-| October contributes only 2-6% of seasonal rain | Planting month is the driest of the growing season |
-| January provides 30-31% of seasonal rain | Mid-season moisture is reliable; peak growing period well-supported |
+| October rainfall declining significantly | Southern (-0.28 mm/yr, p=0.044), Lusaka (-0.35 mm/yr, p=0.020), Muchinga (-0.46 mm/yr, p=0.003) |
+| October most unpredictable | Northern (CV 76.6%), Eastern (74.8%), Lusaka (74.0%) |
+| October contributes only 1-5% of seasonal rain | Planting month is the driest of the growing season |
+| January provides 25-26% of seasonal rain | Mid-season moisture is reliable; peak growing period well-supported |
 | National rainfall-yield correlation | 0.137 (rainfall explains only 1.9% of yield variation) |
 
 ### Policy Implications
@@ -448,16 +468,15 @@ Lusaka, Southern, and Eastern require the most attention for drought preparednes
 Luapula and Northern need drainage infrastructure and raised bed systems. Their negative rainfall-yield correlation (-0.476 and -0.298 respectively) indicates excess moisture is a greater constraint than drought.
 
 **3. October planting window**
-October rainfall has declined significantly in four provinces:
-- Copperbelt: -33% (p=0.037)
-- Northern: -37% (p=0.015)
-- Lusaka: -31% (p=0.036)
-- Southern: -26% (p=0.010)
+October rainfall has declined significantly in three provinces (linear trend):
+- Muchinga: -0.46 mm/year (p=0.003)
+- Lusaka: -0.35 mm/year (p=0.020)
+- Southern: -0.28 mm/year (p=0.044)
 
-Farmers in these provinces need guidance on shifting planting windows, using drought-tolerant varieties, or considering supplemental irrigation.
+Southern also shows significant period decline (-25%, p=0.018). Farmers in these provinces need guidance on shifting planting windows, using drought-tolerant varieties, or considering supplemental irrigation.
 
 **4. October unpredictability**
-Eastern (CV 111.6%), Northern (109.9%), Lusaka (103.5%), and North-Western (103.5%) have highly unpredictable October rainfall. Planting decisions based on October rain alone are high-risk in these provinces.
+Eastern (CV 74.8%), Northern (76.6%), and Lusaka (74.0%) have highly unpredictable October rainfall. Eastern experiences low October rain in 71% of years. Planting decisions based on October rain alone are high-risk in these provinces.
 
 **5. Efficiency gap**
 Lusaka (0.289) is 3x more efficient than Western (0.093). Knowledge transfer from high-efficiency to low-efficiency provinces should focus on soil management and farming practices, not rainfall-dependent strategies.
