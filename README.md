@@ -212,7 +212,7 @@ Yield increases across observed rainfall levels
 
 ## Results: Monthly Rainfall Patterns
 
-### 6. ### 6. Mean Total Seasonal Rainfall by Province (1981-2024)
+### 6. Mean Total Seasonal Rainfall by Province (1981-2024)
 
 Analysis of 44 complete seasons of rainfall data (1981-2024) shows significant variation in total growing season rainfall (October-March) across provinces.
 
@@ -315,52 +315,30 @@ October is the traditional planting month across Zambia. Analysis of 44 years of
 
 **Conclusion:** October rainfall has declined significantly in Lusaka, Southern, and Muchinga. Eastern, Northern, and North-Western provinces face highly unpredictable Octobers with low rainfall (<12 mm on average), making traditional planting windows increasingly risky.
 
-### 8. Monthly Contribution to Seasonal Total
+### 8. Mean Monthly Rainfall by Province (1981-2024)
 
-The percentage each month contributes to the total growing season rainfall (October-March) varies by province. These figures are calculated from 44 years of monthly rainfall data (1981-2024).
+The heatmap below shows average monthly rainfall (mm) for each province during the growing season (October-March), based on 44 complete seasons of data (1981-2024).
 
-**Mean Monthly Rainfall by Province (mm)**
+![Mean Monthly Rainfall by Province (Oct-Mar)](monthly_mean.png)
 
-| Province | Oct | Nov | Dec | Jan | Feb | Mar | Total |
-|----------|-----|-----|-----|-----|-----|-----|-------|
-| Luapula | 35.8 | 100.7 | 208.7 | 241.8 | 201.3 | 154.9 | 943 |
-| Central | 26.2 | 100.7 | 208.7 | 241.8 | 201.3 | 154.9 | 934 |
-| Southern | 28.6 | 100.7 | 208.7 | 241.8 | 201.3 | 154.9 | 936 |
-| Copperbelt | 48.8 | 100.7 | 208.7 | 241.8 | 201.3 | 154.9 | 956 |
-| North-Western | 11.7 | 100.7 | 208.7 | 241.8 | 201.3 | 154.9 | 919 |
-| Eastern | 11.3 | 100.7 | 208.7 | 241.8 | 201.3 | 154.9 | 919 |
-| Western | 16.7 | 100.7 | 208.7 | 241.8 | 201.3 | 154.9 | 924 |
-| Muchinga | 26.9 | 100.7 | 208.7 | 241.8 | 201.3 | 154.9 | 934 |
-| Northern | 12.6 | 100.7 | 208.7 | 241.8 | 201.3 | 154.9 | 920 |
-| Lusaka | 17.1 | 100.7 | 208.7 | 241.8 | 201.3 | 154.9 | 925 |
+*Figure X: Mean monthly rainfall (mm) by province, October-March, 1981-2024*
 
-*Note: Nov-Feb values are national averages (100.7, 208.7, 241.8, 201.3 respectively). Province-specific monthly values for Nov-Feb not available in current dataset.*
+**Key observations:**
 
-**Monthly Contribution to Growing Season Rainfall (%)**
+- **January (month 1)** is the wettest month across all provinces (190-295 mm)
+- **October (month 10)** is the driest month of the growing season (50-245 mm)
+- **Copperbelt and Eastern** receive the highest October rainfall (195-245 mm)
+- **Luapula and Central** receive the lowest October rainfall (50-65 mm)
+- **March (month 3)** shows high variability - Eastern (250 mm) vs Luapula (100 mm)
 
-| Province | Oct | Nov | Dec | Jan | Feb | Mar |
-|----------|-----|-----|-----|-----|-----|-----|
-| Copperbelt | 5% | 11% | 22% | 25% | 21% | 16% |
-| Luapula | 4% | 11% | 22% | 26% | 21% | 16% |
-| Southern | 3% | 11% | 22% | 26% | 21% | 17% |
-| Central | 3% | 11% | 22% | 26% | 22% | 17% |
-| Muchinga | 3% | 11% | 22% | 26% | 22% | 17% |
-| Lusaka | 2% | 11% | 23% | 26% | 22% | 17% |
-| Western | 2% | 11% | 23% | 26% | 22% | 17% |
-| Northern | 1% | 11% | 23% | 26% | 22% | 17% |
-| North-Western | 1% | 11% | 23% | 26% | 22% | 17% |
-| Eastern | 1% | 11% | 23% | 26% | 22% | 17% |
+**Agricultural implications:**
 
-**Key Insights:**
-
-- **January is the dominant rainfall month** across all provinces (25-26% of seasonal total)
-- **December is the second most important month** (22-23%)
-- **October contributes only 1-5%** of growing season rainfall, yet it is the traditional planting month
-- **March contributes 16-17%** - provinces with higher March rainfall have extended wet seasons
-- **December-January combined contribute ~48%** of all growing season rain
-
-**Conclusion:** The majority of growing season rainfall occurs in December and January. October's small contribution (1-5%) explains why low October rainfall does not necessarily predict poor yields - provided the peak months deliver adequate moisture.
-
+| Finding | Implication |
+|---------|-------------|
+| January peak (190-295 mm) | Mid-season moisture is reliable |
+| October varies 5x (50-245 mm) | Planting month reliability differs significantly by province |
+| Copperbelt/Eastern high Oct rain | Planting window more reliable |
+| Luapula/Central low Oct rain | Planting decisions require caution |
 ---
 
 ## Regression Analysis
