@@ -212,40 +212,40 @@ Yield increases across observed rainfall levels
 
 ## Results: Monthly Rainfall Patterns
 
-### 6. Provincial Rainfall Distribution Patterns
+### 6. ### 6. Mean Total Seasonal Rainfall by Province (1981-2024)
 
-Analysis of 45 years of monthly rainfall data (1981–2026) reveals that provinces have unique rainfall distributions during the growing season (October-March). This explains why a single seasonal total can have different effects in different regions.
+Analysis of 44 complete seasons of rainfall data (1981-2024) shows significant variation in total growing season rainfall (October-March) across provinces.
 
-**Average Monthly Rainfall by Province (mm)**
+**Mean Total Seasonal Rainfall by Province — 44 seasons (1981-2024)**
 
-| Province | Oct | Nov | Dec | Jan | Feb | Mar | Pattern Type |
-|----------|-----|-----|-----|-----|-----|-----|--------------|
-| Copperbelt | 16.1 | 33.8 | 69.8 | 80.4 | 67.6 | 51.6 | Mid-season plateau |
-| Luapula | 11.8 | 33.8 | 69.8 | 80.4 | 67.6 | 51.6 | Mid-season plateau |
-| Southern | 9.4 | 33.8 | 69.8 | 80.4 | 67.6 | 51.6 | Evenly distributed |
-| Central | 8.6 | 33.8 | 69.8 | 80.4 | 67.6 | 51.6 | Mid-season plateau |
-| Muchinga | 8.9 | 33.8 | 69.8 | 80.4 | 67.6 | 51.6 | Mid-season plateau |
-| Lusaka | 5.6 | 33.8 | 69.8 | 80.4 | 67.6 | 51.6 | Extended season |
-| Western | 5.5 | 33.8 | 69.8 | 80.4 | 67.6 | 51.6 | Mid-season plateau |
-| Northern | 4.1 | 33.8 | 69.8 | 80.4 | 67.6 | 51.6 | Mid-season peak |
-| North-Western | 3.9 | 33.8 | 69.8 | 80.4 | 67.6 | 51.6 | Mid-season plateau |
-| Eastern | 3.7 | 33.8 | 69.8 | 80.4 | 67.6 | 51.6 | Extended season |
+| Province | Mean Rainfall (mm) | Median (mm) | Std Dev | Min (mm) | Max (mm) |
+|----------|-------------------|-------------|---------|----------|----------|
+| Luapula | 1124 | 1118 | 111 | 850 | 1343 |
+| Central | 1121 | 1096 | 166 | 846 | 1538 |
+| Southern | 1111 | 1103 | 116 | 865 | 1411 |
+| Copperbelt | 1060 | 1078 | 114 | 787 | 1264 |
+| North-Western | 956 | 946 | 113 | 742 | 1218 |
+| Eastern | 875 | 872 | 127 | 676 | 1199 |
+| Western | 869 | 867 | 141 | 613 | 1127 |
+| Muchinga | 788 | 792 | 157 | 443 | 1103 |
+| Northern | 740 | 744 | 138 | 485 | 984 |
+| Lusaka | 666 | 659 | 142 | 360 | 1017 |
 
-*Note: November, December, January, and February values are national averages. Province-specific monthly breakdowns are available in the raw data.*
+**National mean:** 931 mm
 
-**Interpretation of Patterns:**
+**Data notes:**
+- Based on 44 complete seasons (1981-2024)
+- Growing season defined as October-March
+- Muchinga data available from 1981-2024 (included for completeness)
+- Standard deviation indicates inter-annual variability
 
-| Pattern Type | Description | Provinces | Agricultural Implication |
-|--------------|-------------|-----------|-------------------------|
-| **Mid-season peak** | Rainfall concentrated in December-January | Northern | Waterlogging risk during peak; reliable moisture for main growing period |
-| **Mid-season plateau** | Consistent rainfall across December-February | Copperbelt, Luapula, Central, Muchinga, Western, North-Western | Stable moisture during critical growth stages; planting timing flexibility |
-| **Extended season** | Rainfall continues into March | Lusaka, Eastern | Late moisture supports grain filling; wet harvest risk |
-| **Evenly distributed** | Consistent rainfall across all months | Southern | Requires consistent moisture throughout; vulnerable to any dry spell |
+**Key Insights:**
 
-**Key Insight** 
-- January is the wettest month nationally (80.4 mm). October is the driest month of the growing season, with significant variation across provinces 
-- Copperbelt receives 16.1 mm while Eastern receives only 3.7 mm.
-
+- **Luapula, Central, and Southern** receive the highest seasonal rainfall (>1,100 mm)
+- **Lusaka receives the least seasonal rainfall** (666 mm) - only 59% of Luapula's total
+- **Muchinga and Northern** also receive low rainfall (<800 mm)
+- **Lusaka shows the widest range** (360-1017 mm) - highest variability
+- **Luapula shows the smallest range** (850-1343 mm) - most consistent
 
 ### 8. October Rainfall Trends and Variability
 
