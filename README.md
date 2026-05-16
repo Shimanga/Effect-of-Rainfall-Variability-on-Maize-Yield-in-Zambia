@@ -319,7 +319,7 @@ October is the traditional planting month across Zambia. Analysis of 44 years of
 
 The heatmap below shows average monthly rainfall (mm) for each province during the growing season (October-March), based on 44 complete seasons of data (1981-2024).
 
-![Mean Monthly Rainfall by Province (Oct-Mar)](monthly_mean.png)
+![Trend](Output/monthly_mean.png)
 
 *Figure X: Mean monthly rainfall (mm) by province, October-March, 1981-2024*
 
@@ -403,7 +403,7 @@ The heatmap below shows average monthly rainfall (mm) for each province during t
 
 October rainfall - the traditional planting month - has declined significantly in Copperbelt, Northern, Lusaka, and Southern.
 
-![Trend](Output/National_average_rain_yield.png)
+![Trend](Output/national.png)
 *Figure 4: National average rainfall (left axis) and maize yield (right axis), 1986-2013.*
 
 ---
