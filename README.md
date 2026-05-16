@@ -489,7 +489,8 @@ Only 3 years of yield data (2011-2013). Continue monitoring as more data become 
 ---
 
 ### Summary
-This study finds that total seasonal rainfall is a weak predictor of maize yield in Zambia, while monthly rainfall distribution provides more explanatory value, indicating that yield response is sensitive to timing rather than volume. The findings support a shift toward more granular climate analysis in agricultural research.
+
+This study finds that total seasonal rainfall is a weak predictor of maize yield in Zambia, explaining only 1.9% of yield variation (R² = 0.019). Provincial rainfall patterns differ significantly - from mid-season peaks in Luapula and Northern to extended seasons in Lusaka and Eastern. October rainfall - the traditional planting month - has declined significantly in four provinces (Copperbelt -33%, Northern -37%, Lusaka -31%, Southern -26%) and is highly unpredictable in Eastern (CV 112%), Northern (110%), and Lusaka (104%). These findings suggest that rainfall timing and reliability may be more important than seasonal totals, supporting a shift toward more granular climate analysis in agricultural research.
 
 Data Sources: [Rainfall](https://data.humdata.org/organization/3ecac442-7fed-448d-8f78-b385ef6f84e7)
               [Yield](http://zamstats.gov.zm/)   
