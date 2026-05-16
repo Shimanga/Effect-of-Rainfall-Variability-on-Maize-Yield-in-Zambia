@@ -394,10 +394,17 @@ The percentage each month contributes to the total growing season rainfall (Octo
 | Southern | Stable | 1.51 | 1.50 | -1% |
 | Western | Stable | 0.84 | 0.82 | -2% |
 
-### Provincial Rainfall Trends (1981-2000 vs 2001-2026)
-- **Southern, Lusaka, Central**: Significant declines (-8% to -11%)
-- **Other provinces**: No statistically significant change
-- **October rainfall**: Declining reliability across all provinces, especially in the south
+### Provincial Rainfall Trends (October rainfall only)
+
+| Province | Change (1981-2000 vs 2001-2026) | Significance |
+|----------|--------------------------------|--------------|
+| Copperbelt | -33% | Significant (p=0.037) |
+| Northern | -37% | Significant (p=0.015) |
+| Lusaka | -31% | Significant (p=0.036) |
+| Southern | -26% | Significant (p=0.010) |
+| Other provinces | -18% to -35% | Not significant |
+
+October rainfall - the traditional planting month - has declined significantly in Copperbelt, Northern, Lusaka, and Southern.
 
 ![Trend](Output/National_average_rain_yield.png)
 *Figure 4: National average rainfall (left axis) and maize yield (right axis), 1986-2013.*
