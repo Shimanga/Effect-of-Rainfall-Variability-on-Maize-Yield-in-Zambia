@@ -325,11 +325,11 @@ The heatmap below shows average monthly rainfall (mm) for each province during t
 
 **Key observations:**
 
-- **January (month 1)** is the wettest month across all provinces (190-295 mm)
-- **October (month 10)** is the driest month of the growing season (50-245 mm)
-- **Copperbelt and Eastern** receive the highest October rainfall (195-245 mm)
-- **Luapula and Central** receive the lowest October rainfall (50-65 mm)
-- **March (month 3)** shows high variability - Eastern (250 mm) vs Luapula (100 mm)
+- **January (month 1)** is the wettest month across all provinces 
+- **October (month 10)** is the driest month of the growing season 
+- **Copperbelt and Eastern** receive the highest October rainfall 
+- **Luapula and Central** receive the lowest October rainfall 
+- **March (month 3)** shows high variability - Eastern vs Luapula
 
 **Agricultural implications:**
 
