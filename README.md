@@ -216,7 +216,7 @@ Yield increases across observed rainfall levels
 
 Analysis of 44 complete seasons of rainfall data (1981-2024) shows significant variation in total growing season rainfall (October-March) across provinces.
 
-**Mean Total Seasonal Rainfall by Province — 44 seasons (1981-2024)**
+**Mean Total Seasonal Rainfall by Province - 44 seasons (1981-2024)**
 
 | Province | Mean Rainfall (mm) | Median (mm) | Std Dev | Min (mm) | Max (mm) |
 |----------|-------------------|-------------|---------|----------|----------|
